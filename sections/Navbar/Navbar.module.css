@@ -2,14 +2,19 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: white;
-  border-bottom: 1px solid var(--border-default);
+  background: rgba(243, 246, 247, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1328px;
+  width: 100%;
+  height: 90px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 21px 0;
 
   display: flex;
   align-items: center;
@@ -17,25 +22,75 @@
 }
 
 .logo {
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoImage {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.logoImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.logoText {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  color: #000;
+  text-align: center;
 }
 
 .nav {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
 }
 
 .nav a {
   text-decoration: none;
-  color: var(--text-primary);
-  font-size: 14px;
+  color: #000;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cta {
+  background: #1c1c1c;
+  border-radius: 2px;
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .cta a {
-  padding: 8px 14px;
-  border: 1px solid var(--border-default);
-  border-radius: 6px;
+  padding: 16px;
   text-decoration: none;
-  font-size: 14px;
-  color: var(--text-primary);
+  color: #fff;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
