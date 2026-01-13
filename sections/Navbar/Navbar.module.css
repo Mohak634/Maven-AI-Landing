@@ -1,0 +1,41 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.cta a {
+  padding: 8px 14px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-primary);
+}
