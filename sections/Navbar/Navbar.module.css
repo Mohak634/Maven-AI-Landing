@@ -1,96 +1,76 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(243, 246, 247, 0.5);
+  width: 100%;
+  background-color: var(--surface-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
-.inner {
-  max-width: 1328px;
+.container {
+  max-width: var(--layout-container-max-width);
   width: 100%;
-  height: 90px;
+  height: var(--navbar-height);
   margin: 0 auto;
-  padding: 21px 0;
-
+  padding: var(--navbar-padding-y) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
+.logoSection {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-md);
+  flex-shrink: 0;
 }
 
 .logoImage {
-  width: 64px;
-  height: 64px;
+  width: var(--navbar-logo-size);
+  height: var(--navbar-logo-size);
   flex-shrink: 0;
   position: relative;
+  box-shadow: var(--shadow-drop-small);
+  background-color: var(--surface-secondary);
+  border-radius: var(--border-radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.logoImage img {
+.logoImage :global(.logo) {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: none;
+}
+
+.logoImage :global(.logo img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: center;
 }
 
 .logoText {
-  font-family: 'Google Sans', sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1;
-  color: #000;
-  text-align: center;
+  font-family: var(--typography-heading-lg-family);
+  font-size: var(--navbar-logo-text-size);
+  line-height: var(--typography-heading-lg-line-height);
+  font-weight: var(--typography-heading-lg-weight);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 45px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #000;
-  font-family: 'Google Sans', sans-serif;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.cta {
-  background: #1c1c1c;
-  border-radius: 2px;
-  height: 56px;
-  min-height: 56px;
-  max-height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: var(--navbar-link-gap);
   flex-shrink: 0;
 }
 
-.cta a {
-  padding: 16px;
-  text-decoration: none;
-  color: #fff;
-  font-family: 'Google Sans', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.cta {
+  flex-shrink: 0;
 }

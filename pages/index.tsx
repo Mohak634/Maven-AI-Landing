@@ -6,6 +6,7 @@ import UseCases from '@/sections/UseCases/UseCases'
 import Security from '@/sections/Security/Security'
 import Testimonials from '@/sections/Testimonials/Testimonials'
 import Pricing from '@/sections/Pricing/Pricing'
+import About from '@/sections/About/About'
 import Footer from '@/sections/Footer/Footer'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Security />
       <Testimonials />
       <Pricing />
+      <About />
       <Footer />
     </>
   )

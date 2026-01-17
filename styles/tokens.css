@@ -1,0 +1,270 @@
+/**
+ * Maven AI Design System Tokens
+ * Generated from Figma design system
+ * All tokens use semantic naming for maintainability
+ */
+
+:root {
+  /* ============================================
+     COLOR TOKENS - Surface
+     ============================================ */
+  
+  /* Primary Surfaces */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f3f6f7;
+  --surface-accent: #1c1c1c;
+  --surface-neutral: #747f8d;
+  
+  /* Surface with Transparency */
+  --surface-overlay: rgba(243, 246, 247, 0.5);
+  
+  /* ============================================
+     COLOR TOKENS - Text
+     ============================================ */
+  
+  /* Primary Text Colors */
+  --text-primary: #1c1c1c;
+  --text-secondary: #575e67;
+  --text-neutral: #ffffff;
+  
+  /* Neutral Text Variants */
+  --text-neutral-800: #4b5162;
+  --text-neutral-700: #626981;
+  
+  /* Text with Transparency */
+  --text-neutral-alpha-50: rgba(255, 255, 255, 0.5);
+  --text-white-alpha-50: rgba(255, 255, 255, 1);
+  
+  /* ============================================
+     COLOR TOKENS - Icon
+     ============================================ */
+  
+  --icon-black: #1c1c1c;
+  --icon-white: #ffffff;
+  
+  /* ============================================
+     COLOR TOKENS - Border
+     ============================================ */
+  
+  --border-default: #747f8d;
+  
+  /* ============================================
+     TYPOGRAPHY TOKENS - Font Families
+     ============================================ */
+  
+  --font-family-google-sans: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-source-serif: 'Source Serif Pro', Georgia, serif;
+  --font-family-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* ============================================
+     TYPOGRAPHY TOKENS - Font Weights
+     ============================================ */
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* ============================================
+     TYPOGRAPHY TOKENS - Font Sizes & Line Heights
+     ============================================ */
+  
+  /* Display/Heading Styles */
+  --typography-display-xl-size: 64px;
+  --typography-display-xl-line-height: 80px;
+  --typography-display-xl-weight: var(--font-weight-regular);
+  --typography-display-xl-family: var(--font-family-source-serif);
+  
+  /* Heading Styles */
+  --typography-heading-xl-size: 64px;
+  --typography-heading-xl-line-height: 80px;
+  --typography-heading-xl-weight: var(--font-weight-medium);
+  --typography-heading-xl-family: var(--font-family-google-sans);
+  
+  --typography-heading-lg-size: 40px;
+  --typography-heading-lg-line-height: 50px;
+  --typography-heading-lg-weight: var(--font-weight-medium);
+  --typography-heading-lg-family: var(--font-family-google-sans);
+  
+  --typography-heading-md-size: 32px;
+  --typography-heading-md-line-height: 40px;
+  --typography-heading-md-weight: var(--font-weight-regular);
+  --typography-heading-md-family: var(--font-family-google-sans);
+  
+  --typography-heading-sm-size: 28px;
+  --typography-heading-sm-line-height: 35px;
+  --typography-heading-sm-weight: var(--font-weight-regular);
+  --typography-heading-sm-family: var(--font-family-google-sans);
+  
+  /* Content/Body Styles */
+  --typography-content-xl-size: 32px;
+  --typography-content-xl-line-height: 40px;
+  --typography-content-xl-weight: var(--font-weight-regular);
+  --typography-content-xl-family: var(--font-family-google-sans);
+  
+  --typography-content-lg-size: 24px;
+  --typography-content-lg-line-height: 30px;
+  --typography-content-lg-weight: var(--font-weight-regular);
+  --typography-content-lg-family: var(--font-family-google-sans);
+  
+  --typography-content-md-size: 20px;
+  --typography-content-md-line-height: 25px;
+  --typography-content-md-weight: var(--font-weight-regular);
+  --typography-content-md-family: var(--font-family-google-sans);
+  
+  --typography-content-sm-size: 16px;
+  --typography-content-sm-line-height: 20px;
+  --typography-content-sm-weight: var(--font-weight-regular);
+  --typography-content-sm-family: var(--font-family-google-sans);
+  
+  /* CTA/Button Text */
+  --typography-cta-size: 24px;
+  --typography-cta-line-height: 30px;
+  --typography-cta-weight: var(--font-weight-bold);
+  --typography-cta-family: var(--font-family-google-sans);
+  
+  /* Step Number Styles */
+  --typography-step-active-size: 64px;
+  --typography-step-active-line-height: 80px;
+  --typography-step-active-weight: var(--font-weight-medium);
+  --typography-step-active-family: var(--font-family-google-sans);
+  
+  --typography-step-inactive-size: 128px;
+  --typography-step-inactive-line-height: 160px;
+  --typography-step-inactive-weight: var(--font-weight-regular);
+  --typography-step-inactive-family: var(--font-family-google-sans);
+  
+  
+  /* ============================================
+     SPACING TOKENS - Base Scale
+     ============================================ */
+  
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-xxxl: 64px;
+  --space-xxxxl: 90px;
+  
+  /* Semantic Spacing - Size */
+  --semantic-size-24: 24px;
+  
+  /* Semantic Spacing - Space */
+  --semantic-space-8: 8px;
+  
+  /* Stack Spacing (Vertical) */
+  --stack-4xl: 40px;
+  
+  /* Inline Spacing (Horizontal) */
+  --inline-4xl: 40px;
+  
+  /* ============================================
+     SPACING TOKENS - Layout
+     ============================================ */
+  
+  --layout-container-max-width: 1328px;
+  --layout-container-padding-x: 24px;
+  --layout-container-padding-y-sm: 16px;
+  --layout-container-padding-y-md: 21px;
+  --layout-container-padding-y-lg: 48px;
+  
+  --layout-gap-sm: 16px;
+  --layout-gap-md: 24px;
+  --layout-gap-lg: 40px;
+  --layout-gap-xl: 45px;
+  
+  /* ============================================
+     BORDER RADIUS TOKENS
+     ============================================ */
+  
+  --border-radius-none: 0;
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 11px;
+  --border-radius-soft: 20px;
+  --border-radius-full: 50%;
+  
+  /* ============================================
+     SHADOW/EFFECT TOKENS
+     ============================================ */
+  
+  /* Drop Shadows */
+  --shadow-drop-small: -4px 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-drop-medium: -5px 5px 20px rgba(0, 0, 0, 0.25);
+  
+  /* Inner Shadows */
+  --shadow-inner-text: inset 6px 5px 8px rgba(0, 0, 0, 0.5);
+  --shadow-inner-small: inset -4px 5px 4px rgba(0, 0, 0, 0.35);
+  --shadow-inner-card: 
+    inset -4px 4px 11px rgba(0, 0, 0, 0.1),
+    inset -15px 15px 21px rgba(0, 0, 0, 0.09),
+    inset -33px 33px 28px rgba(0, 0, 0, 0.05),
+    inset -59px 59px 33px rgba(0, 0, 0, 0.01),
+    inset -92px 92px 37px rgba(0, 0, 0, 0);
+  
+  /* Card Effects */
+  --shadow-card-inactive: 
+    0 -2px 6px rgba(0, 0, 0, 0.2),
+    0 -8px 12px rgba(0, 0, 0, 0.17),
+    0 -19px 16px rgba(0, 0, 0, 0.1),
+    0 -33px 19px rgba(0, 0, 0, 0.03),
+    0 -52px 20px rgba(0, 0, 0, 0);
+  
+  --shadow-card-active: 
+    0 -2px 6px rgba(0, 0, 0, 0.2),
+    0 -8px 12px rgba(0, 0, 0, 0.17),
+    0 -19px 16px rgba(0, 0, 0, 0.1),
+    0 -33px 19px rgba(0, 0, 0, 0.03),
+    0 -52px 20px rgba(0, 0, 0, 0);
+  
+  /* ============================================
+     COMPONENT-SPECIFIC TOKENS
+     ============================================ */
+  
+  /* Navbar */
+  --navbar-height: 90px;
+  --navbar-background: var(--surface-overlay);
+  --navbar-padding-y: var(--layout-container-padding-y-md);
+  --navbar-logo-size: 64px;
+  --navbar-logo-text-size: var(--typography-heading-lg-size);
+  --navbar-link-size: var(--typography-heading-sm-size);
+  --navbar-link-gap: var(--layout-gap-xl);
+  
+  /* Buttons */
+  --button-primary-height: 56px;
+  --button-primary-background: var(--surface-accent);
+  --button-primary-text: var(--text-neutral);
+  --button-primary-text-size: var(--typography-cta-size);
+  --button-primary-border-radius: var(--border-radius-xs);
+  --button-primary-padding-x: var(--space-md);
+  --button-primary-padding-y: var(--space-md);
+  
+  --button-secondary-height: 56px;
+  --button-secondary-background: var(--surface-primary);
+  --button-secondary-text: var(--text-primary);
+  --button-secondary-border: 1px solid var(--border-default);
+  --button-secondary-border-radius: var(--border-radius-md);
+  --button-secondary-padding-x: var(--space-md);
+  --button-secondary-padding-y: var(--space-md);
+  
+  /* Cards */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--border-radius-md);
+  --card-background: var(--surface-primary);
+  --card-shadow: var(--shadow-card-inactive);
+  
+  /* Input Fields */
+  --input-padding: var(--space-sm);
+  --input-border: 1px solid var(--border-default);
+  --input-border-radius: var(--border-radius-sm);
+  --input-background: var(--surface-primary);
+  --input-text: var(--text-primary);
+  
+  /* Hover States */
+  --hover-opacity: 0.8;
+  --hover-transition: 0.2s ease;
+}

@@ -1,0 +1,124 @@
+/* Import design system tokens */
+@import './tokens.css';
+
+/* Global reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-google-sans);
+  color: var(--text-primary);
+  background-color: var(--surface-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utility classes using design tokens */
+.text-display-xl {
+  font-family: var(--typography-display-xl-family);
+  font-size: var(--typography-display-xl-size);
+  line-height: var(--typography-display-xl-line-height);
+  font-weight: var(--typography-display-xl-weight);
+}
+
+.text-heading-xl {
+  font-family: var(--typography-heading-xl-family);
+  font-size: var(--typography-heading-xl-size);
+  line-height: var(--typography-heading-xl-line-height);
+  font-weight: var(--typography-heading-xl-weight);
+}
+
+.text-heading-lg {
+  font-family: var(--typography-heading-lg-family);
+  font-size: var(--typography-heading-lg-size);
+  line-height: var(--typography-heading-lg-line-height);
+  font-weight: var(--typography-heading-lg-weight);
+}
+
+.text-heading-md {
+  font-family: var(--typography-heading-md-family);
+  font-size: var(--typography-heading-md-size);
+  line-height: var(--typography-heading-md-line-height);
+  font-weight: var(--typography-heading-md-weight);
+}
+
+.text-heading-sm {
+  font-family: var(--typography-heading-sm-family);
+  font-size: var(--typography-heading-sm-size);
+  line-height: var(--typography-heading-sm-line-height);
+  font-weight: var(--typography-heading-sm-weight);
+}
+
+.text-content-xl {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+}
+
+.text-content-lg {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+}
+
+.text-content-md {
+  font-family: var(--typography-content-md-family);
+  font-size: var(--typography-content-md-size);
+  line-height: var(--typography-content-md-line-height);
+  font-weight: var(--typography-content-md-weight);
+}
+
+.text-content-sm {
+  font-family: var(--typography-content-sm-family);
+  font-size: var(--typography-content-sm-size);
+  line-height: var(--typography-content-sm-line-height);
+  font-weight: var(--typography-content-sm-weight);
+}
+
+.text-body-base {
+  font-family: var(--typography-body-base-family);
+  font-size: var(--typography-body-base-size);
+  line-height: var(--typography-body-base-line-height);
+  font-weight: var(--typography-body-base-weight);
+}
+
+.text-cta {
+  font-family: var(--typography-cta-family);
+  font-size: var(--typography-cta-size);
+  line-height: var(--typography-cta-line-height);
+  font-weight: var(--typography-cta-weight);
+}
+
+/* Color utility classes */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-neutral {
+  color: var(--text-neutral);
+}
+
+.bg-primary {
+  background-color: var(--surface-primary);
+}
+
+.bg-secondary {
+  background-color: var(--surface-secondary);
+}
+
+.bg-accent {
+  background-color: var(--surface-accent);
+}

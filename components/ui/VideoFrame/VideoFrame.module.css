@@ -1,0 +1,44 @@
+.videoFrame {
+  position: relative;
+  width: 100%;
+  background-color: var(--surface-primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aspect Ratios */
+.aspect169 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect45 {
+  aspect-ratio: 4 / 5;
+}
+
+.aspect11 {
+  aspect-ratio: 1 / 1;
+}
+
+/* Border Radius */
+.radiusSharp {
+  border-radius: var(--border-radius-xs);
+}
+
+.radiusSoft {
+  border-radius: var(--border-radius-soft);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--surface-secondary);
+}
+
+/* Content styling */
+.videoFrame > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

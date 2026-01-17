@@ -1,0 +1,81 @@
+.outerCard {
+  width: 444px;
+  height: 553px;
+  background-color: var(--surface-secondary);
+  border: 3px dashed var(--surface-neutral);
+  border-radius: var(--border-radius-xs);
+  border-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: border-style var(--hover-transition);
+  cursor: pointer;
+}
+
+
+.outerCard:hover {
+  border-style: solid;
+}
+
+.innerCard {
+  width: 388px;
+  height: 511px;
+  background-color: var(--surface-primary);
+  border-radius: var(--border-radius-xs);
+  box-shadow: var(--shadow-drop-medium);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageFrame {
+  width: 330px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--surface-primary);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.name {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-primary);
+  margin: 0;
+  width: 100%;
+}
+
+.role {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  width: 100%;
+}

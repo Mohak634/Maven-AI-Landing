@@ -1,0 +1,30 @@
+.about {
+  width: 100%;
+  background-color: var(--surface-secondary);
+  padding: var(--space-xxxxl) var(--space-xxxxl);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.heading {
+  font-family: var(--typography-display-xl-family);
+  font-size: var(--typography-display-xl-size);
+  line-height: var(--typography-display-xl-line-height);
+  font-weight: var(--typography-display-xl-weight);
+  color: var(--text-primary);
+  text-align: center;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.teamGrid {
+  display: flex;
+  gap: var(--layout-gap-lg);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1528px;
+  padding: var(--space-md);
+}
