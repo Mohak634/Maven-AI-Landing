@@ -63,7 +63,6 @@
   height: 781px;
   width: 100%;
   max-width: 1728px;
-  padding: 0 200px;
 }
 
 .stepCard {
@@ -131,7 +130,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
-  animation: fadeIn 0.5s ease 0.5s both;
+  animation: fadeIn 0.2s ease 0.2s both;
 }
 
 @keyframes fadeIn {
@@ -151,7 +150,8 @@
 }
 
 .videoFrame {
-  width: 980px;
+  width: 100%;
+  max-width: 980px;
   height: 460px;
   position: relative;
 }

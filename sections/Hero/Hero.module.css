@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--surface-secondary);
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: var(--space-lg) var(--layout-container-padding-x) var(--space-xxxxl);
+}
+
+/* Background Layer - z-index: 1 */
+.backgroundLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.backgroundImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Foreground Layer - z-index: 2 */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 1341px;
+  margin-top: 188px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.headline {
+  font-family: var(--typography-display-xl-family);
+  font-size: var(--typography-display-xl-size);
+  line-height: var(--typography-display-xl-line-height);
+  font-weight: var(--typography-display-xl-weight);
+  color: var(--text-primary);
+  margin: 0;
+  width: 100%;
+}
+
+.description {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  width: 100%;
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mockupContainer {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1329px;
+  display: flex;
+  justify-content: center;
+}

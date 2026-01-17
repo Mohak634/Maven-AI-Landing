@@ -1,0 +1,224 @@
+.features {
+  width: 100%;
+  background-color: var(--surface-secondary);
+  padding: 70px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--layout-container-max-width);
+  display: flex;
+  gap: var(--layout-gap-lg);
+  align-items: flex-start;
+}
+
+.leftPane {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-lg));
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: flex-start;
+}
+
+.rightPane {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 756px;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  align-items: center;
+}
+
+.scrollerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  width: 1011px;
+  flex-shrink: 0;
+}
+
+.bgContainer {
+  position: absolute;
+  height: 570px;
+  left: 0;
+  top: 0;
+  width: 1011px;
+  pointer-events: none;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.bgGradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 64.316% 36.261% at 50% 50%,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(203, 203, 203, 1) 70.676%,
+    rgba(163, 163, 163, 1) 83.417%,
+    rgba(124, 124, 124, 1) 96.158%
+  );
+  opacity: 1;
+}
+
+.bgImageWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  height: 125.78%;
+  left: 0.05%;
+  top: -16.05%;
+  width: 103.56%;
+  max-width: none;
+}
+
+.bgShadow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset -12px 16px 32px 0px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.contentFrame {
+  display: flex;
+  height: 570px;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  padding: 30px 50px;
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.integrationsGrid {
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  line-height: 0;
+  place-items: start;
+  position: relative;
+  flex-shrink: 0;
+  width: 602px;
+  height: 100%;
+}
+
+.integrationsPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-family: var(--typography-heading-xl-family);
+  font-size: var(--typography-heading-xl-size);
+  line-height: var(--typography-heading-xl-line-height);
+  font-weight: var(--typography-heading-xl-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.featureTabsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.featureTab {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+}
+
+.featureTabActive {
+  background-color: var(--surface-accent);
+}
+
+.featureTabInactive {
+  background-color: var(--surface-primary);
+  box-shadow: var(--shadow-drop-small);
+}
+
+.featureTabLabel {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.featureTabLabelActive {
+  color: var(--text-neutral);
+}
+
+.featureDescription {
+  background-color: var(--surface-primary);
+  display: flex;
+  height: 136px;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  padding: 1px 0;
+  position: relative;
+  width: 1048px;
+  flex-shrink: 0;
+}
+
+.featureDescription::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset -8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.featureDescriptionText {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+  width: 987px;
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}

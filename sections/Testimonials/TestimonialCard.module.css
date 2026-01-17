@@ -6,8 +6,8 @@
   gap: 20px;
   align-items: flex-start;
   cursor: pointer;
-  transition: all 0.5s ease;
-  will-change: transform, filter;
+  transition: width 0.5s ease, height 0.5s ease, filter 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform, filter, width, height, opacity;
   flex-shrink: 0;
 }
 
@@ -24,7 +24,8 @@
   height: 362px;
   box-shadow: var(--shadow-drop-medium);
   z-index: 1;
-  filter: blur(4px);
+  filter: blur(2px);
+  opacity: 0.7;
 }
 
 .picture {
@@ -52,26 +53,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
+  min-width: 0;
   width: 100%;
-  transition: width 0.5s ease, height 0.5s ease;
+  overflow: hidden;
 }
 
 .cardActive .content {
   height: 332px;
-  width: 584px;
+  max-width: 584px;
 }
 
 .cardInactive .content {
   height: 312px;
-  width: 510px;
+  max-width: 510px;
 }
 
 .quote {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   flex: 1;
 }
@@ -83,6 +85,8 @@
   font-weight: var(--typography-content-lg-weight);
   color: var(--text-secondary);
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .details {

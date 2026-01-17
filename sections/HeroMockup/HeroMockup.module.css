@@ -1,0 +1,83 @@
+.heroMockup {
+  position: relative;
+  width: 100%;
+  height: 676px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-soft);
+  box-shadow: var(--shadow-drop-medium);
+  overflow: hidden;
+}
+
+/* Handle 4/3 aspect ratio override */
+.heroMockup.aspect43 .videoContainer .videoFrame {
+  aspect-ratio: 4 / 3 !important;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  background-color: #1c1e20;
+  border-radius: var(--border-radius-soft);
+  box-shadow:
+    0px 16px 24px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 6px 0px rgba(0, 0, 0, 0.1),
+    10px 0px 1px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.browserChrome {
+  display: flex;
+  gap: 63px;
+  align-items: center;
+  padding: 15px 33px 0 33px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.dots {
+  height: 23px;
+  width: 95.966px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.dotsImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.urlBar {
+  background-color: #26292c;
+  height: 29.864px;
+  border-radius: var(--border-radius-lg);
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.videoContainer {
+  position: absolute;
+  height: 621px;
+  left: 0;
+  overflow: hidden;
+  border-bottom-left-radius: var(--border-radius-soft);
+  border-bottom-right-radius: var(--border-radius-soft);
+  top: 55px;
+  width: 100%;
+}
+
+.videoFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
