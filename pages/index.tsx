@@ -1,6 +1,6 @@
 import Navbar from '@/sections/Navbar/Navbar'
 import Hero from '@/sections/Hero/Hero'
-import Process123 from '@/sections/Process123/Process123'
+import Process123 from '@/sections/WorkflowSteps/Process123'
 import Features from '@/sections/Features/Features'
 import UseCases from '@/sections/UseCases/UseCases'
 import Security from '@/sections/Security/Security'

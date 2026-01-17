@@ -12,6 +12,7 @@ type PricingPlan = {
   monthlyPrice: string
   annualPrice: string
   features: string[]
+  ctaText: string
 }
 
 const pricingPlans: PricingPlan[] = [
@@ -28,6 +29,7 @@ const pricingPlans: PricingPlan[] = [
       'Lorem ipsum dolor sit amet',
       'Lorem ipsum dolor sit amet',
     ],
+    ctaText: 'Buy Now',
   },
   {
     name: 'Enterprise',
@@ -42,6 +44,7 @@ const pricingPlans: PricingPlan[] = [
       'Lorem ipsum dolor sit amet',
       'Lorem ipsum dolor sit amet',
     ],
+    ctaText: 'Contact Sales',
   },
 ]
 
@@ -97,6 +100,7 @@ export default function Pricing() {
               price={isAnnual ? plan.annualPrice : plan.monthlyPrice}
               billingPeriod={isAnnual ? ' /Year' : ' /Month'}
               features={plan.features}
+              ctaText={plan.ctaText}
             />
           ))}
         </div>

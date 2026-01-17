@@ -14,7 +14,7 @@ export default function PricingCard({
   price,
   billingPeriod,
   features,
-  ctaText = 'Buy Now',
+  ctaText,
 }: PricingCardProps) {
   return (
     <div className={styles.card}>

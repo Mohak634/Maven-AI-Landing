@@ -1,0 +1,198 @@
+.workflowSteps {
+  width: 100%;
+  background-color: var(--surface-secondary);
+  padding: 70px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--layout-container-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1316px;
+}
+
+.heading {
+  font-family: var(--typography-display-xl-family);
+  font-size: var(--typography-display-xl-size);
+  line-height: var(--typography-display-xl-line-height);
+  font-weight: var(--typography-display-xl-weight);
+  color: var(--surface-accent);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 854px;
+  overflow: hidden;
+}
+
+.steps {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  height: 781px;
+  width: 100%;
+  max-width: 1728px;
+  padding: 0 200px;
+}
+
+.stepCard {
+  background-color: var(--surface-primary);
+  border: none;
+  border-radius: var(--border-radius-xs);
+  box-shadow: var(--shadow-drop-medium);
+  cursor: pointer;
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  height: 748px;
+}
+
+.stepCardActive {
+  width: 1032px;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.stepCardInactive {
+  width: 120px;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 1;
+}
+
+.stepCardInactive:hover {
+  opacity: var(--hover-opacity);
+}
+
+.stepNumberActive {
+  font-family: var(--typography-step-active-family);
+  font-size: var(--typography-step-active-size);
+  line-height: var(--typography-step-active-line-height);
+  font-weight: var(--typography-step-active-weight);
+  color: var(--text-neutral-800);
+  margin: 0;
+  text-align: left;
+  /* text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.3),
+    -2px -2px 4px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(0, 0, 0, 0.2); */
+  min-width: fit-content;
+}
+
+.stepNumberInactive {
+  font-family: var(--typography-step-inactive-family);
+  font-size: var(--typography-step-inactive-size);
+  line-height: var(--typography-step-inactive-line-height);
+  font-weight: var(--typography-step-inactive-weight);
+  color: var(--text-neutral-800);
+  margin: 0;
+  text-align: center;
+  /* text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.3),
+    -2px -2px 4px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(0, 0, 0, 0.2); */
+}
+
+.activeContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  animation: fadeIn 0.5s ease 0.5s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mockupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.videoFrame {
+  width: 980px;
+  height: 460px;
+  position: relative;
+}
+
+.videoFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stepTitle {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-primary);
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  height: 39px;
+  display: flex;
+  align-items: center;
+}
+
+.stepDescription {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+.carouselDots {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}

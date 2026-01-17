@@ -15,35 +15,35 @@ const testimonials: Testimonial[] = [
       'I trust Maven with my daily finance workflows. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
     name: 'Firstname Lastname',
     position: 'Huge Position at Majorhedge Fund',
-    imagePath: 'public\Oval.svg',
+    imagePath: '/Testimonials/Oval.svg',
   },
   {
     content:
       'Maven has transformed how we handle financial operations. The platform is intuitive and powerful, making complex workflows simple and efficient.',
     name: 'Jane Smith',
     position: 'CFO at Tech Innovations Inc.',
-    imagePath: 'public\Oval.svg',
+    imagePath: '/Testimonials/Oval.svg',
   },
   {
     content:
       'As a financial analyst, I rely on Maven daily. The accuracy and speed of its insights have been game-changing for our team.',
     name: 'Robert Johnson',
     position: 'Senior Analyst at Global Finance Corp',
-    imagePath: 'public\Oval.svg',
+    imagePath: '/Testimonials/Oval.svg',
   },
   {
     content:
       'The automation features in Maven have saved us countless hours. It handles complex calculations and reporting with precision.',
     name: 'Emily Davis',
     position: 'Finance Director at Startup Ventures',
-    imagePath: 'public\Oval.svg',
+    imagePath: '/Testimonials/Oval.svg',
   },
   {
     content:
       'Maven provides the transparency and control we need for our financial processes. Highly recommend it to any finance team.',
     name: 'Michael Chen',
     position: 'VP of Finance at Enterprise Solutions',
-    imagePath: 'public\Oval.svg',
+    imagePath: '/Testimonials/Oval.svg',
   },
 ]
 
@@ -60,7 +60,14 @@ export default function Testimonials() {
   const CARD_SPACING = INACTIVE_CARD_WIDTH + CARD_GAP
 
   const handleCardClick = (targetIndex: number) => {
-    setActiveIndex(targetIndex)
+    // Ensure index wraps around for infinite looping
+    const wrappedIndex = ((targetIndex % testimonials.length) + testimonials.length) % testimonials.length
+    setActiveIndex(wrappedIndex)
+  }
+
+  // Helper function to get the wrapped index for display calculations
+  const getWrappedIndex = (index: number) => {
+    return ((index % testimonials.length) + testimonials.length) % testimonials.length
   }
 
   // Calculate transform to center the active card

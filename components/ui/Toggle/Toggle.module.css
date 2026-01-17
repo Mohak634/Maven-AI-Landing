@@ -12,14 +12,6 @@
   transition: background-color var(--hover-transition);
 }
 
-.toggle.on {
-  justify-content: flex-end;
-}
-
-.toggle.off {
-  justify-content: flex-start;
-}
-
 .toggle:hover:not(:disabled) {
   opacity: var(--hover-opacity);
 }
@@ -35,11 +27,18 @@
 }
 
 .handle {
-  position: relative;
-  flex-shrink: 0;
+  position: absolute;
   width: 32px;
   height: 32px;
   z-index: 1;
+  left: var(--semantic-space-8);
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.toggle.on .handle {
+  transform: translateY(-50%) translateX(52px);
 }
 
 .handleImage {

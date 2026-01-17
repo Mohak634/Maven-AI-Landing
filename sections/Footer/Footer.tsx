@@ -54,7 +54,7 @@ export default function Footer() {
 
       <div className={styles.copyright}>
         <p className={styles.copyrightText}>
-          Copyright © 2025 Maven AI Corporation. All rights reserved.
+          Copyright © 2026 Maven AI Corporation. All rights reserved.
         </p>
       </div>
     </footer>
