@@ -1,0 +1,112 @@
+.card {
+  background-color: var(--surface-primary);
+  border-radius: var(--border-radius-xs);
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  will-change: transform, filter;
+  flex-shrink: 0;
+}
+
+.cardActive {
+  width: 768px;
+  height: 392px;
+  box-shadow: var(--shadow-drop-medium);
+  z-index: 10;
+  filter: blur(0);
+}
+
+.cardInactive {
+  width: 708px;
+  height: 362px;
+  box-shadow: var(--shadow-drop-medium);
+  z-index: 1;
+  filter: blur(4px);
+}
+
+.picture {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.cardActive .content {
+  height: 332px;
+  width: 584px;
+}
+
+.cardInactive .content {
+  height: 312px;
+  width: 510px;
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.quoteText {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.name {
+  font-family: var(--typography-content-lg-family);
+  font-size: var(--typography-content-lg-size);
+  line-height: var(--typography-content-lg-line-height);
+  font-weight: var(--typography-content-lg-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.position {
+  font-family: var(--typography-content-sm-family);
+  font-size: var(--typography-content-sm-size);
+  line-height: var(--typography-content-sm-line-height);
+  font-weight: var(--typography-content-sm-weight);
+  color: var(--surface-neutral);
+  margin: 0;
+}

@@ -1,3 +1,3 @@
 export default function UseCases() {
-    return null
+    return <section id="usecases"></section>
   }

@@ -1,3 +1,3 @@
 export default function Security() {
-    return null
+    return <section id="security"></section>
   }

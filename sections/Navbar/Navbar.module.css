@@ -4,6 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .container {
@@ -30,7 +43,7 @@
   flex-shrink: 0;
   position: relative;
   box-shadow: var(--shadow-drop-small);
-  background-color: var(--surface-secondary);
+  background-color: var(--surface-primary);
   border-radius: var(--border-radius-xs);
   display: flex;
   align-items: center;

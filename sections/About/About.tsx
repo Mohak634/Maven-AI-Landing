@@ -3,7 +3,7 @@ import TeamCard from './TeamCard'
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <h2 className={styles.heading}>Meet the people behind the curtain</h2>
       
       <div className={styles.teamGrid}>

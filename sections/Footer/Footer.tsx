@@ -3,7 +3,7 @@ import Logo from '@/components/ui/Logo'
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={styles.tagline}>
         <div className={styles.logoWrapper}>
           <Logo variant="transparent" />

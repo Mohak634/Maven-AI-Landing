@@ -1,3 +1,3 @@
 export default function Hero() {
-    return null
+    return <section id="hero"></section>
   }

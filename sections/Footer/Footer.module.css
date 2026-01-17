@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  width: 100vw;
   background-color: var(--surface-secondary);
   padding: var(--space-xxxxl) var(--space-xxxxl) var(--space-md);
   display: flex;
@@ -18,12 +18,12 @@
 
 .logoWrapper {
   flex-shrink: 0;
-  width: 179px;
+  width: 180px;
   height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--surface-secondary);
+  background-color: var(--surface-primary);
   box-shadow: var(--shadow-drop-small);
   border-radius: var(--border-radius-xs);
   padding: var(--space-md);
