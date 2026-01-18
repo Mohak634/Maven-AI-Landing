@@ -1,6 +1,7 @@
 .navbar {
   width: 100%;
-  background-color: var(--surface-overlay);
+  background-color: var(--surface-secondary);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;

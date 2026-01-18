@@ -1,66 +1,31 @@
 .pricing {
   width: 100%;
   background-color: var(--surface-secondary);
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 980px;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.background {
+/* Background Layer - z-index: 0 */
+.backgroundLayer {
   position: absolute;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
-  transform: translateX(-200px);
+  pointer-events: none;
+  overflow: visible;
+  opacity: 0.5;
 }
 
-.backgroundVisual1,
-.backgroundVisual2 {
-  position: absolute;
-  height: 983.765px;
-  top: 100px;
-}
-
-.backgroundVisual1 {
-  left: calc(50% + 27.59px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-50%) translateX(-398px);
-}
-
-.visualWrapper {
-  flex: none;
-  transform: rotate(180deg) scaleY(-1);
-  height: 983.765px;
-  width: 1469.591px;
-  position: relative;
-}
-
-.visualContainer {
-  position: absolute;
-  inset: -6.33% 0 0 0;
-  height: 983.765px;
-  width: 1469.591px;
-}
-
-.backgroundVisual2 {
-  left: calc(50% + 27.59px);
-  transform: translateX(-50%) translateX(711.59px);
-  height: 983.765px;
-  width: 1469.591px;
-}
-
-.visualImage {
-  display: block;
-  max-width: none;
+.backgroundImage {
+  display: inline;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: auto;
+  object-position: center;
 }
 
 .container {

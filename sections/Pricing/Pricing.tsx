@@ -1,11 +1,7 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import Toggle from '@/components/ui/Toggle'
 import PricingCard from './PricingCard'
 import styles from './Pricing.module.css'
-
-const imgVisual = 'http://localhost:3845/assets/78507c3aaa85a48ee494d18e287533fc8aead6a1.svg'
-const imgVisual1 = 'http://localhost:3845/assets/09dcb305be1d03bed81534ad0c190f0db17c8ac7.svg'
 
 type PricingPlan = {
   name: string
@@ -57,27 +53,13 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className={styles.pricing}>
-      <div className={styles.background}>
-        <div className={styles.backgroundVisual1}>
-          <div className={styles.visualWrapper}>
-            <div className={styles.visualContainer}>
-              <img
-                src={imgVisual}
-                alt=""
-                className={styles.visualImage}
-              />
-            </div>
-          </div>
-        </div>
-        <div className={styles.backgroundVisual2}>
-          <div className={styles.visualContainer}>
-            <img
-              src={imgVisual1}
-              alt=""
-              className={styles.visualImage}
-            />
-          </div>
-        </div>
+      {/* Background Layer */}
+      <div className={styles.backgroundLayer}>
+        <img
+          src="/Hero/bg.svg"
+          alt=""
+          className={styles.backgroundImage}
+        />
       </div>
 
       <div className={styles.container}>

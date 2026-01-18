@@ -7,6 +7,7 @@ type Feature = {
   id: string
   label: string
   description: string
+  imageSrc: string
 }
 
 const features: Feature[] = [
@@ -14,21 +15,25 @@ const features: Feature[] = [
     id: 'feature-1',
     label: 'Feature 1',
     description: 'Description for feature 1 goes here.',
+    imageSrc: '/Features/Integrations.png',
   },
   {
     id: 'feature-2',
     label: 'Feature 2',
     description: 'Description for feature 2 goes here.',
+    imageSrc: '/Features/Bg.png',
   },
   {
     id: 'feature-3',
     label: 'Feature 3',
     description: 'Description for feature 3 goes here.',
+    imageSrc: '/Features/Integrations.png',
   },
   {
     id: 'feature-4',
     label: 'Feature 4',
     description: 'Description for feature 4 goes here.',
+    imageSrc: '/Features/Integrations.png',
   },
 ]
 
@@ -63,8 +68,8 @@ function FeatureContent({ feature }: FeatureContentProps) {
             <div className={styles.bgGradient} />
             <div className={styles.bgImageWrapper}>
               <img 
-                src="http://localhost:3845/assets/af131fcd994a169e6577b0c71cb87545da7e8d09.png" 
-                alt="" 
+                src="Features/Bg.png" 
+                alt="Background Image" 
                 className={styles.bgImage}
               />
             </div>
@@ -72,16 +77,14 @@ function FeatureContent({ feature }: FeatureContentProps) {
           <div className={styles.bgShadow} />
         </div>
         <div className={styles.contentFrame}>
-          <div className={styles.integrationsGrid}>
-            {/* Integration icons will be rendered here - placeholder for now */}
-            <div className={styles.integrationsPlaceholder}>
-              {/* Integration icons grid content */}
-            </div>
+          <div className={styles.pngFrame}>
+            <img 
+              src={feature.imageSrc} 
+              alt={feature.label}
+              className={styles.pngImage}
+            />
           </div>
         </div>
-      </div>
-      <div className={styles.featureDescription}>
-        <p className={styles.featureDescriptionText}>{feature.description}</p>
       </div>
     </div>
   )
@@ -95,7 +98,6 @@ export default function Features() {
     <section id="features" className={styles.features}>
       <div className={styles.container}>
         <div className={styles.leftPane}>
-          <h2 className={styles.sectionTitle}>Features</h2>
           <div className={styles.featureTabsList}>
             {features.map((feature, index) => (
               <FeatureTab
@@ -105,6 +107,11 @@ export default function Features() {
                 onClick={() => setActiveFeatureIndex(index)}
               />
             ))}
+          </div>
+          <div className={styles.featureDescription}>
+            <p className={styles.featureDescriptionText}>
+              {features[activeFeatureIndex].description}
+            </p>
           </div>
         </div>
         <div className={styles.rightPane}>

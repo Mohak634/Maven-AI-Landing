@@ -13,31 +13,31 @@ const useCases: UseCase[] = [
     label: 'Use Case Here',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: '/useCases/Research.mp4',
+    videoSrc: 'videos/hero-demo.mp4',
   },  
   {
     label: 'Use Case Here',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: '/useCases/Research.mp4',
+    videoSrc: 'videos/useCases/Research.mp4',
   },
   {
     label: 'Use Case Here',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: '/useCases/Research.mp4',
+    videoSrc: 'videos/useCases/Research.mp4',
   },
   {
     label: 'Use Case Here',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: '/useCases/Research.mp4',
+    videoSrc: 'videos/useCases/Research.mp4',
   },
   {
     label: 'Use Case Here',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: '/useCases/Research.mp4',
+    videoSrc: 'videos/useCases/Research.mp4',
   },
 ]
 
@@ -68,9 +68,15 @@ export default function UseCases() {
           <div className={styles.videoContainer}>
             <div className={styles.videoBackground} />
             <VideoFrame aspectRatio="4/5" radius="sharp" className={styles.videoFrame}>
-              <video autoPlay loop playsInline controlsList="nodownload">
-                <source src={activeUseCase.videoSrc} />
-              </video>
+              <video
+                key={activeUseCase.videoSrc}
+                src={activeUseCase.videoSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controlsList="nodownload"
+              />
             </VideoFrame>
           </div>
         </div>
