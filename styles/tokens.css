@@ -11,7 +11,7 @@
   
   /* Primary Surfaces */
   --surface-primary: #ffffff;
-  --surface-secondary: #f3f6f7;
+  --surface-secondary: #f3f8f8;
   --surface-accent: #1c1c1c;
   --surface-neutral: #747f8d;
   
@@ -69,68 +69,68 @@
      ============================================ */
   
   /* Display/Heading Styles */
-  --typography-display-xl-size: 64px;
-  --typography-display-xl-line-height: 80px;
+  --typography-display-xl-size: 5.4rem;
+  --typography-display-xl-line-height: 7rem;
   --typography-display-xl-weight: var(--font-weight-regular);
   --typography-display-xl-family: var(--font-family-source-serif);
   
   /* Heading Styles */
-  --typography-heading-xl-size: 64px;
-  --typography-heading-xl-line-height: 80px;
+  --typography-heading-xl-size: 6.4rem;
+  --typography-heading-xl-line-height: 8rem;
   --typography-heading-xl-weight: var(--font-weight-medium);
   --typography-heading-xl-family: var(--font-family-google-sans);
   
-  --typography-heading-lg-size: 40px;
-  --typography-heading-lg-line-height: 50px;
+  --typography-heading-lg-size: 4rem;
+  --typography-heading-lg-line-height: 5rem;
   --typography-heading-lg-weight: var(--font-weight-medium);
   --typography-heading-lg-family: var(--font-family-google-sans);
   
-  --typography-heading-md-size: 32px;
-  --typography-heading-md-line-height: 40px;
+  --typography-heading-md-size: 3.2rem;
+  --typography-heading-md-line-height: 4rem;
   --typography-heading-md-weight: var(--font-weight-regular);
   --typography-heading-md-family: var(--font-family-google-sans);
   
-  --typography-heading-sm-size: 28px;
-  --typography-heading-sm-line-height: 35px;
+  --typography-heading-sm-size: 2.8rem;
+  --typography-heading-sm-line-height: 3.5rem;
   --typography-heading-sm-weight: var(--font-weight-regular);
   --typography-heading-sm-family: var(--font-family-google-sans);
   
   /* Content/Body Styles */
-  --typography-content-xl-size: 32px;
-  --typography-content-xl-line-height: 40px;
+  --typography-content-xl-size: 3.2rem;
+  --typography-content-xl-line-height: 4rem;
   --typography-content-xl-weight: var(--font-weight-regular);
   --typography-content-xl-family: var(--font-family-google-sans);
   
-  --typography-content-lg-size: 24px;
-  --typography-content-lg-line-height: 30px;
+  --typography-content-lg-size: 2.4rem;
+  --typography-content-lg-line-height: 3rem;
   --typography-content-lg-weight: var(--font-weight-regular);
   --typography-content-lg-family: var(--font-family-google-sans);
   
-  --typography-content-md-size: 20px;
-  --typography-content-md-line-height: 25px;
+  --typography-content-md-size: 2rem;
+  --typography-content-md-line-height: 2.5rem;
   --typography-content-md-weight: var(--font-weight-regular);
   --typography-content-md-family: var(--font-family-google-sans);
   
-  --typography-content-sm-size: 16px;
-  --typography-content-sm-line-height: 20px;
+  --typography-content-sm-size: 1.6rem;
+  --typography-content-sm-line-height: 2rem;
   --typography-content-sm-weight: var(--font-weight-regular);
   --typography-content-sm-family: var(--font-family-google-sans);
   
   /* CTA/Button Text */
-  --typography-cta-size: 24px;
-  --typography-cta-line-height: 30px;
-  --typography-cta-weight: var(--font-weight-bold);
+  --typography-cta-size: 2.4rem;
+  --typography-cta-line-height: 3rem;
+  --typography-cta-weight: var(--font-weight-medium);
   --typography-cta-family: var(--font-family-google-sans);
   
   /* Step Number Styles */
-  --typography-step-active-size: 64px;
-  --typography-step-active-line-height: 80px;
+  --typography-step-active-size: 6.4rem;
+  --typography-step-active-line-height: 8rem;
   --typography-step-active-weight: var(--font-weight-medium);
   --typography-step-active-family: var(--font-family-google-sans);
   
-  --typography-step-inactive-size: 128px;
-  --typography-step-inactive-line-height: 160px;
-  --typography-step-inactive-weight: var(--font-weight-regular);
+  --typography-step-inactive-size: 9.6rem;
+  --typography-step-inactive-line-height: 12rem;
+  --typography-step-inactive-weight: var(--font-weight-medium);
   --typography-step-inactive-family: var(--font-family-google-sans);
   
   
@@ -138,54 +138,54 @@
      SPACING TOKENS - Base Scale
      ============================================ */
   
-  --space-xxs: 4px;
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-xxl: 48px;
-  --space-xxxl: 64px;
-  --space-xxxxl: 90px;
+  --space-xxs: 0.4rem;
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-xxl: 4.8rem;
+  --space-xxxl: 6.4rem;
+  --space-xxxxl: 9rem;
   
   /* Semantic Spacing - Size */
-  --semantic-size-24: 24px;
+  --semantic-size-24: 2.4rem;
   
   /* Semantic Spacing - Space */
-  --semantic-space-8: 8px;
+  --semantic-space-8: 0.8rem;
   
   /* Stack Spacing (Vertical) */
-  --stack-4xl: 40px;
+  --stack-4xl: 4rem;
   
   /* Inline Spacing (Horizontal) */
-  --inline-4xl: 40px;
+  --inline-4xl: 4rem;
   
   /* ============================================
      SPACING TOKENS - Layout
      ============================================ */
   
-  --layout-container-max-width: 1328px;
-  --layout-container-padding-x: 24px;
-  --layout-container-padding-y-sm: 16px;
-  --layout-container-padding-y-md: 21px;
-  --layout-container-padding-y-lg: 48px;
+  --layout-container-max-width: 132.8rem;
+  --layout-container-padding-x: 2.4rem;
+  --layout-container-padding-y-sm: 1.6rem;
+  --layout-container-padding-y-md: 2.1rem;
+  --layout-container-padding-y-lg: 4.8rem;
   
-  --layout-gap-sm: 16px;
-  --layout-gap-md: 24px;
-  --layout-gap-lg: 40px;
-  --layout-gap-xl: 45px;
+  --layout-gap-sm: 1.6rem;
+  --layout-gap-md: 2.4rem;
+  --layout-gap-lg: 4rem;
+  --layout-gap-xl: 4.5rem;
   
   /* ============================================
      BORDER RADIUS TOKENS
      ============================================ */
   
   --border-radius-none: 0;
-  --border-radius-xs: 2px;
-  --border-radius-sm: 4px;
-  --border-radius-md: 6px;
-  --border-radius-lg: 8px;
-  --border-radius-xl: 11px;
-  --border-radius-soft: 20px;
+  --border-radius-xs: 0.2rem;
+  --border-radius-sm: 0.4rem;
+  --border-radius-md: 0.6rem;
+  --border-radius-lg: 0.8rem;
+  --border-radius-xl: 1.1rem;
+  --border-radius-soft: 2rem;
   --border-radius-full: 50%;
   
   /* ============================================
@@ -193,15 +193,15 @@
      ============================================ */
   
   /* Drop Shadows */
-  --shadow-drop-small: -4px 4px 8px rgba(0, 0, 0, 0.5);
-  --shadow-drop-medium: -5px 5px 20px rgba(0, 0, 0, 0.25);
+  --shadow-drop-small: -3px 3px 6px rgba(0, 0, 0, 0.5);
+  --shadow-drop-medium: -3px 3px 10px rgba(0, 0, 0, 0.25);
   
   /* Inner Shadows */
   --shadow-inner-text: inset 6px 5px 8px rgba(0, 0, 0, 0.5);
-  --shadow-inner-small: inset -4px 5px 4px rgba(0, 0, 0, 0.35);
+  --shadow-inner-small: inset -2px 2px 2px rgba(0, 0, 0, 0.35);
   --shadow-inner-card: 
     inset -4px 4px 11px rgba(0, 0, 0, 0.1),
-    inset -15px 15px 21px rgba(0, 0, 0, 0.09);
+    inset -1px 5px 11px rgba(0, 0, 0, 0.09);
     /* inset -33px 33px 28px rgba(0, 0, 0, 0.05),
     inset -59px 59px 33px rgba(0, 0, 0, 0.01),
     inset -92px 92px 37px rgba(0, 0, 0, 0); */
@@ -226,24 +226,24 @@
      ============================================ */
   
   /* Navbar */
-  --navbar-height: 90px;
+  --navbar-height: 9rem;
   --navbar-background: var(--surface-overlay);
   --navbar-padding-y: var(--layout-container-padding-y-md);
-  --navbar-logo-size: 64px;
+  --navbar-logo-size: 8.8rem;
   --navbar-logo-text-size: var(--typography-heading-lg-size);
   --navbar-link-size: var(--typography-heading-sm-size);
   --navbar-link-gap: var(--layout-gap-xl);
   
   /* Buttons */
-  --button-primary-height: 56px;
+  --button-primary-height: 5.6rem;
   --button-primary-background: var(--surface-accent);
   --button-primary-text: var(--text-neutral);
   --button-primary-text-size: var(--typography-cta-size);
   --button-primary-border-radius: var(--border-radius-xs);
-  --button-primary-padding-x: var(--space-md);
-  --button-primary-padding-y: var(--space-md);
+  --button-primary-padding-x: var(--space-lg);
+  --button-primary-padding-y: var(--space-lg);
   
-  --button-secondary-height: 56px;
+  --button-secondary-height: 5.6rem;
   --button-secondary-background: var(--surface-primary);
   --button-secondary-text: var(--text-primary);
   --button-secondary-border: 1px solid var(--border-default);

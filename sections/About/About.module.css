@@ -4,8 +4,14 @@
   padding: var(--space-xxxxl) var(--space-xxxxl);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--space-xxl) var(--layout-container-padding-x);
+  }
 }
 
 .heading {
@@ -15,7 +21,6 @@
   font-weight: var(--typography-display-xl-weight);
   color: var(--text-primary);
   text-align: center;
-  white-space: nowrap;
   margin: 0;
 }
 
@@ -25,6 +30,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1528px;
+  max-width: var(--layout-container-max-width);
   padding: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    flex-direction: column;
+    gap: var(--space-xxl);
+    padding: 0;
+  }
 }

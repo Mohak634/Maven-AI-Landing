@@ -10,6 +10,7 @@ export default function NavLink({
   children,
   href = '#',
   className = '',
+  onClick,
   ...props
 }: NavLinkProps) {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -28,6 +29,11 @@ export default function NavLink({
           behavior: 'smooth',
         })
       }
+    }
+    
+    // Call any additional onClick handler passed as prop
+    if (onClick) {
+      onClick(e)
     }
   }
 

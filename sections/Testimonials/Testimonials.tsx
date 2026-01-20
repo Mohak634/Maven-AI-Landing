@@ -52,10 +52,10 @@ export default function Testimonials() {
   const initialIndex = Math.floor(testimonials.length / 2)
   const [activeIndex, setActiveIndex] = useState(initialIndex)
 
-  // Card dimensions and spacing
-  const ACTIVE_CARD_WIDTH = 768
-  const INACTIVE_CARD_WIDTH = 708
-  const CARD_GAP = 20
+  // Card dimensions and spacing (in rem, assuming 1rem = 10px)
+  const ACTIVE_CARD_WIDTH = 76.8 // 768px = 76.8rem
+  const INACTIVE_CARD_WIDTH = 70.8 // 708px = 70.8rem
+  const CARD_GAP = 2 // 20px = 2rem (using --space-md = 1.6rem, but 2rem is closer to design)
   // Spacing between card centers (using inactive width + gap for simpler calculation)
   const CARD_SPACING = INACTIVE_CARD_WIDTH + CARD_GAP
 
@@ -76,7 +76,7 @@ export default function Testimonials() {
     const halfActiveWidth = ACTIVE_CARD_WIDTH / 2
     // For each previous card, account for inactive width + gap
     const previousCardsOffset = activeIndex * CARD_SPACING
-    return `translateX(calc(50% - ${halfActiveWidth + previousCardsOffset}px))`
+    return `translateX(calc(50% - ${halfActiveWidth + previousCardsOffset}rem))`
   }
 
   return (

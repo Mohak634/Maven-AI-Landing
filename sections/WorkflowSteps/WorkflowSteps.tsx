@@ -61,20 +61,17 @@ export default function WorkflowSteps() {
                   className={`${styles.stepCard} ${isActive ? styles.stepCardActive : styles.stepCardInactive}`}
                   onClick={() => setActiveStep(index)}
                 >
-                  {isActive ? (
-                    <div key={`active-${activeStep}`} className={styles.activeContent}>
-                      <p className={styles.stepNumberActive}>Step {step.stepNumber}</p>
-                      <div className={styles.mockupContainer}>
-                        <VideoFrame aspectRatio="16/9" radius="sharp" className={styles.videoFrame}>
-                          <img src={step.mockupSrc} alt={step.title} />
-                        </VideoFrame>
-                      </div>
-                      <p className={styles.stepTitle}>{step.title}</p>
-                      <p className={styles.stepDescription}>{step.description}</p>
+                  <div className={styles.activeContent}>
+                    <p className={styles.stepNumberActive}>Step {step.stepNumber}</p>
+                    <div className={styles.mockupContainer}>
+                      <VideoFrame aspectRatio="16/9" radius="sharp" className={styles.videoFrame}>
+                        <img src={step.mockupSrc} alt={step.title} />
+                      </VideoFrame>
                     </div>
-                  ) : (
-                    <p className={styles.stepNumberInactive}>{step.stepNumber}</p>
-                  )}
+                    <p className={styles.stepTitle}>{step.title}</p>
+                    <p className={styles.stepDescription}>{step.description}</p>
+                  </div>
+                  <p className={styles.stepNumberInactive}>{step.stepNumber}</p>
                 </button>
               )
             })}

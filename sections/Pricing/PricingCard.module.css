@@ -3,7 +3,8 @@
   padding: var(--space-xxl) var(--space-lg);
   border-radius: var(--border-radius-xs);
   box-shadow: var(--shadow-drop-medium);
-  width: 533.333px;
+  width: 50%;
+  max-width: 53.333rem;
   flex-shrink: 0;
   transition: box-shadow var(--hover-transition);
   position: relative;
@@ -24,7 +25,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 37px;
+  gap: 3.7rem;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -58,12 +59,11 @@
 
 .priceAmount {
   font-family: var(--font-family-google-sans);
-  font-size: 56px;
-  line-height: 60px;
+  font-size: 5.6rem;
+  line-height: 6rem;
   font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   text-align: center;
-  white-space: nowrap;
 }
 
 .billingPeriod {
@@ -73,7 +73,7 @@
   font-weight: var(--font-weight-regular);
   color: var(--text-secondary);
   text-align: left;
-  width: 85px;
+  width: 8.5rem;
   margin-left: 0;
 }
 
@@ -83,7 +83,7 @@
 
 .button {
   width: 100%;
-  padding: 12px 65px;
+  padding: 1.2rem 6.5rem;
 }
 
 .featureList {
@@ -96,7 +96,7 @@
 
 .feature {
   display: flex;
-  gap: 11px;
+  gap: 1.1rem;
   align-items: flex-start;
   width: 100%;
 }
@@ -104,8 +104,8 @@
 .checkmark {
   position: relative;
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;

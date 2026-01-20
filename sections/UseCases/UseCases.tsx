@@ -64,7 +64,6 @@ export default function UseCases() {
               </button>
             ))}
           </div>
-          <p className={styles.description}>{activeUseCase.description}</p>
           <div className={styles.videoContainer}>
             <div className={styles.videoBackground} />
             <VideoFrame aspectRatio="4/5" radius="sharp" className={styles.videoFrame}>
@@ -79,6 +78,7 @@ export default function UseCases() {
               />
             </VideoFrame>
           </div>
+          <p className={styles.description}>{activeUseCase.description}</p>
         </div>
       </div>
     </section>

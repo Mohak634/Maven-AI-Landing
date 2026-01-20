@@ -10,7 +10,7 @@
   padding: var(--space-lg) var(--layout-container-padding-x) var(--space-xxxxl);
 }
 
-/* Background Layer - z-index: 1 */
+/* Background Layer - z-index: 0 */
 .backgroundLayer {
   position: absolute;
   inset: 0;
@@ -21,9 +21,9 @@
 }
 
 .backgroundImage {
-  display: inline;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   object-fit: auto;
   object-position: center;
 }
@@ -37,8 +37,8 @@
   align-items: center;
   gap: var(--space-xl);
   width: 100%;
-  max-width: 1341px;
-  margin-top: 100px;
+  max-width: var(--layout-container-max-width);
+  margin-top: 10rem;
 }
 
 .textContent {
@@ -78,11 +78,54 @@
   width: 100%;
 }
 
+.ctaLink {
+  text-decoration: none;
+}
+
 .mockupContainer {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1329px;
+  max-width: var(--layout-container-max-width);
   display: flex;
   justify-content: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 76.8rem) {
+  .hero {
+    min-height: auto;
+    padding: var(--space-lg) var(--layout-container-padding-x) var(--space-xxl);
+  }
+
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    margin-top: var(--navbar-height);
+    gap: var(--space-lg);
+  }
+
+  .textContent {
+    gap: var(--space-md);
+  }
+
+  .ctaContainer {
+    width: 100%;
+  }
+
+  .ctaLink {
+    width: 100%;
+    display: block;
+  }
+
+  .ctaLink button {
+    width: 100%;
+  }
+
+  .mockupContainer {
+    margin-top: var(--space-lg);
+  }
 }

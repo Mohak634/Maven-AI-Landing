@@ -6,21 +6,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid rgba(255, 0, 0, 0.1); */
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 10px;
+  scroll-behavior: auto;
+  font-size: clamp(42.5%, 0.70vw, 50%);
 }
 
 body {
+  /* This ensures standard text defaults back to 16px equivalent */
+  font-size: 1.6rem; 
   font-family: var(--font-family-google-sans);
   color: var(--text-primary);
   background-color: var(--surface-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 /* Typography utility classes using design tokens */
 .text-display-xl {
   font-family: var(--typography-display-xl-family);

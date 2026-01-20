@@ -1,7 +1,8 @@
 .heroMockup {
   position: relative;
   width: 100%;
-  height: 676px;
+  min-height: 67.6rem;
+  aspect-ratio: 1328 / 676;
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius-soft);
@@ -20,9 +21,9 @@
   background-color: #1c1e20;
   border-radius: var(--border-radius-soft);
   box-shadow:
-    0px 16px 24px 0px rgba(0, 0, 0, 0.1),
-    0px 2px 6px 0px rgba(0, 0, 0, 0.1),
-    10px 0px 1px 0px rgba(0, 0, 0, 0.04);
+    0 1.6rem 2.4rem 0 rgba(0, 0, 0, 0.1),
+    0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.1),
+    1rem 0 0.1rem 0 rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -30,16 +31,16 @@
 
 .browserChrome {
   display: flex;
-  gap: 63px;
+  gap: 6.3rem;
   align-items: center;
-  padding: 15px 33px 0 33px;
+  padding: 1.5rem 3.3rem 0 3.3rem;
   flex-shrink: 0;
   width: 100%;
 }
 
 .dots {
-  height: 23px;
-  width: 95.966px;
+  height: 2.3rem;
+  width: 9.6rem;
   flex-shrink: 0;
   position: relative;
 }
@@ -53,7 +54,7 @@
 
 .urlBar {
   background-color: #26292c;
-  height: 29.864px;
+  height: 3rem;
   border-radius: var(--border-radius-lg);
   flex: 1;
   flex-shrink: 0;
@@ -61,12 +62,12 @@
 
 .videoContainer {
   position: absolute;
-  height: 621px;
+  height: calc(100% - 5.5rem);
   left: 0;
   overflow: hidden;
   border-bottom-left-radius: var(--border-radius-soft);
   border-bottom-right-radius: var(--border-radius-soft);
-  top: 55px;
+  top: 5.5rem;
   width: 100%;
 }
 
@@ -80,4 +81,31 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Mobile Styles */
+@media (max-width: 76.8rem) {
+  .heroMockup {
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .browserChrome {
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md) 0 var(--space-md);
+  }
+
+  .dots {
+    height: 1.8rem;
+    width: 7.2rem;
+  }
+
+  .urlBar {
+    height: 2.4rem;
+  }
+
+  .videoContainer {
+    top: 4.4rem;
+    height: calc(100% - 4.4rem);
+  }
 }

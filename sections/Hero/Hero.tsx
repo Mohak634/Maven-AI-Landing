@@ -27,13 +27,17 @@ export default function Hero() {
             finance and professional services. Saving hours per analyst, every week.
           </p>
         </div>
-
         <div className={styles.ctaContainer}>
-          <Button variant="primary" showTrailingIcon>
-            Request Demo
-          </Button>
+          <a 
+            href="https://demo.mavenai.finance" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.ctaLink}>
+            <Button variant="primary" showTrailingIcon>
+              Try Free
+            </Button>
+          </a>
         </div>
-
         <div className={styles.mockupContainer}>
           <HeroMockup
             videoSrc="/videos/hero-demo.mp4"

@@ -1,10 +1,12 @@
 .features {
+  position: relative;
   width: 100%;
   background-color: var(--surface-secondary);
-  padding: 70px 200px;
+  padding: 7rem 20rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  overflow-x: clip;
 }
 
 .container {
@@ -13,17 +15,18 @@
   display: flex;
   gap: var(--layout-gap-lg);
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .leftPane {
-  position: sticky;
+  position: static;
   top: var(--navbar-height);
   flex: 0 0 20%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
   align-self: flex-start;
-  min-height: 570px;
+  min-height: 57rem;
   justify-content: flex-start;
 }
 
@@ -37,7 +40,7 @@
 .featureContent {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3rem;
   width: 100%;
   align-items: center;
 }
@@ -45,20 +48,25 @@
 .scrollerContent {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   align-items: flex-start;
   position: relative;
-  width: 1011px;
+  width: 100%;
+  max-width: 101.1rem;
   flex-shrink: 0;
+  overflow-x: clip;
 }
 
 .bgContainer {
   position: absolute;
-  height: 570px;
+  min-height: 57rem;
+  aspect-ratio: 1011 / 570;
   left: 0;
   top: 0;
-  width: 1011px;
+  width: 100%;
+  max-width: 100%;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .bgLayer {
@@ -83,6 +91,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .bgImage {
@@ -91,37 +100,39 @@
   left: 0.05%;
   top: -16.05%;
   width: 103.56%;
-  max-width: none;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .bgShadow {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: inset -12px 16px 32px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: inset -1.2rem 1.6rem 3.2rem 0px rgba(0, 0, 0, 0.8);
   pointer-events: none;
 }
 
 .contentFrame {
   display: flex;
-  height: 570px;
+  min-height: 57rem;
+  aspect-ratio: 1011 / 570;
   align-items: center;
   justify-content: center;
   overflow: clip;
-  padding: 80px;
+  padding: 8rem;
   position: relative;
   width: 100%;
+  max-width: 100%;
   flex-shrink: 0;
   z-index: 1;
+  box-sizing: border-box;
 }
 
 .pngFrame {
   position: relative;
   width: 100%;
   height: 100%;
-  /* background-color: None; */
   border-radius: var(--border-radius-xs);
-  /* box-shadow: var(--shadow-inner-card); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,18 +142,19 @@
 .pngImage {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
   display: block;
 }
 
-/* .sectionTitle {
+.sectionTitle {
   font-family: var(--typography-heading-xl-family);
   font-size: var(--typography-heading-xl-size);
   line-height: var(--typography-heading-xl-line-height);
   font-weight: var(--typography-heading-xl-weight);
   color: var(--text-primary);
   margin: 0;
-} */
+}
 
 .featureTabsList {
   display: flex;
@@ -155,15 +167,17 @@
   align-items: center;
   background: none;
   border: none;
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
   cursor: pointer;
   text-align: left;
   width: 100%;
   border-radius: var(--border-radius-xs);
+  transition: transform 0.2s ease;
 }
 
 .featureTabActive {
   background-color: var(--surface-accent);
+  transform: scale(1.05);
 }
 
 .featureTabInactive {
@@ -182,36 +196,197 @@
 
 .featureTabLabelActive {
   color: var(--text-neutral);
-  font-weight: var(--typography-content-xxl-weight);
 }
 
 .featureDescription {
   background-color: var(--surface-primary);
   display: flex;
-  height: 287px;
+  min-height: 13.6rem;
   align-items: center;
   justify-content: center;
   overflow: clip;
-  padding: 40px 0;
+  padding: 0.1rem 0;
   position: relative;
   width: 100%;
+  max-width: 101.1rem;
   flex-shrink: 0;
-  box-shadow: inset -8px 8px 16px 0px rgba(0, 0, 0, 0.25);
-  align-items: flex-start;
+  box-shadow: inset -0.8rem 0.8rem 1.6rem 0px rgba(0, 0, 0, 0.25);
 }
 
 .featureDescriptionText {
+  font-family: var(--typography-content-xl-family);
+  font-size: var(--typography-content-xl-size);
+  line-height: var(--typography-content-xl-line-height);
+  font-weight: var(--typography-content-xl-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Mobile Feature Cards */
+.mobileFeaturesList {
+  display: none;
+}
+
+.mobileFeatureCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: var(--surface-primary);
+  border-radius: var(--border-radius-xs);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-drop-small);
+  overflow: hidden;
+}
+
+.mobileFeatureBgContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--border-radius-xs);
+}
+
+.mobileFeatureBgLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.mobileFeatureBgGradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 64.316% 36.261% at 50% 50%,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(203, 203, 203, 1) 70.676%,
+    rgba(163, 163, 163, 1) 83.417%,
+    rgba(124, 124, 124, 1) 96.158%
+  );
+  opacity: 1;
+}
+
+.mobileFeatureBgImageWrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.mobileFeatureBgImage {
+  position: absolute;
+  height: 125.78%;
+  left: 0.05%;
+  top: -16.05%;
+  width: 103.56%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.mobileFeatureBgShadow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset -1.2rem 1.6rem 3.2rem 0px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.mobileFeatureVisual {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--border-radius-xs);
+  background-color: transparent;
+}
+
+.mobileFeatureImageWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.mobileFeatureImage {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.mobileFeatureTitle {
+  font-family: var(--typography-heading-md-family);
+  font-size: var(--typography-heading-md-size);
+  line-height: var(--typography-heading-md-line-height);
+  font-weight: var(--typography-heading-md-weight);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.mobileFeatureDescription {
   font-family: var(--typography-content-lg-family);
   font-size: var(--typography-content-lg-size);
   line-height: var(--typography-content-lg-line-height);
   font-weight: var(--typography-content-lg-weight);
   color: var(--text-secondary);
   margin: 0;
-  text-align: center;
-  width: 100%;
-  padding: 0 var(--space-md);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .features {
+    padding: var(--space-xxl) var(--layout-container-padding-x);
+  }
+
+  .container {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .leftPane {
+    display: none;
+  }
+
+  .rightPane {
+    display: none;
+  }
+
+  .mobileFeaturesList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mobileFeatureCard {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .mobileFeatureVisual {
+    aspect-ratio: 16 / 9;
+  }
+
+  .mobileFeatureImageWrapper {
+    padding: var(--space-md);
+  }
 }

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './TestimonialCard.module.css'
 
 type TestimonialCardProps = {
@@ -14,7 +13,6 @@ export default function TestimonialCard({
   content,
   name,
   position,
-  imagePath,
   isActive,
   onClick,
 }: TestimonialCardProps) {
@@ -23,17 +21,8 @@ export default function TestimonialCard({
       className={`${styles.card} ${isActive ? styles.cardActive : styles.cardInactive}`}
       onClick={onClick}
     >
-      <div className={styles.picture}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={imagePath}
-            alt={name}
-            width={104}
-            height={104}
-            className={styles.image}
-          />
-        </div>
-      </div>
+      <span className={styles.quoteMarkTop}>"</span>
+      <span className={styles.quoteMarkBottom}>"</span>
 
       <div className={styles.content}>
         <div className={styles.quote}>

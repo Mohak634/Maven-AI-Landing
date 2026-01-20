@@ -1,7 +1,7 @@
 .workflowSteps {
   width: 100%;
   background-color: var(--surface-secondary);
-  padding: 70px 200px;
+  padding: 7rem 16.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +13,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 5rem;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--layout-gap-sm);
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 1316px;
+  max-width: 109.6rem;
 }
 
 .heading {
@@ -47,22 +47,23 @@
 .stepsContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--layout-gap-xl);
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 854px;
+  min-height: 71rem;
   overflow: hidden;
 }
 
 .steps {
   display: flex;
-  gap: 22px;
+  gap: 2.2rem;
   align-items: center;
   justify-content: center;
-  height: 781px;
+  min-height: 65rem;
   width: 100%;
-  max-width: 1728px;
+  max-width: 144rem;
+  overflow: visible;
 }
 
 .stepCard {
@@ -71,24 +72,31 @@
   border-radius: var(--border-radius-xs);
   box-shadow: var(--shadow-drop-medium);
   cursor: pointer;
-  padding: 20px 28px;
+  padding: var(--layout-gap-sm) 2.8rem;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-  height: 748px;
+  min-height: 62.3rem;
+  flex-shrink: 0;
 }
 
 .stepCardActive {
-  width: 1032px;
+  width: 90rem;
+  height: 73rem;
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--layout-gap-sm);
 }
 
 .stepCardInactive {
-  width: 120px;
+  width: 12rem;
+  height: 71rem;
   align-items: center;
   justify-content: flex-start;
   opacity: 1;
+}
+
+.stepCardInactive .activeContent {
+  display: none;
 }
 
 .stepCardInactive:hover {
@@ -103,10 +111,6 @@
   color: var(--text-neutral-800);
   margin: 0;
   text-align: left;
-  /* text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.3),
-    -2px -2px 4px rgba(255, 255, 255, 0.5),
-    0 0 8px rgba(0, 0, 0, 0.2); */
   min-width: fit-content;
 }
 
@@ -118,17 +122,13 @@
   color: var(--text-neutral-800);
   margin: 0;
   text-align: center;
-  /* text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.3),
-    -2px -2px 4px rgba(255, 255, 255, 0.5),
-    0 0 8px rgba(0, 0, 0, 0.2); */
 }
 
 .activeContent {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--layout-gap-sm);
   align-items: flex-start;
   animation: fadeIn 0.2s ease 0.2s both;
 }
@@ -151,8 +151,8 @@
 
 .videoFrame {
   width: 100%;
-  max-width: 980px;
-  height: 460px;
+  max-width: 81.6rem;
+  aspect-ratio: 16 / 9;
   position: relative;
 }
 
@@ -171,7 +171,7 @@
   margin: 0;
   text-align: left;
   width: 100%;
-  height: 39px;
+  min-height: 3.9rem;
   display: flex;
   align-items: center;
 }
@@ -185,14 +185,105 @@
   margin: 0;
   text-align: left;
   width: 100%;
-  height: 76px;
+  min-height: 6rem;
   display: flex;
   align-items: center;
 }
 
 .carouselDots {
   display: flex;
-  gap: 24px;
+  gap: var(--layout-gap-md);
   align-items: center;
   justify-content: center;
+}
+
+/* Mobile Layout - max-width: 768px */
+@media (max-width: 76.8rem) {
+  .workflowSteps {
+    padding: var(--space-xxl) var(--layout-container-padding-x);
+  }
+
+  .container {
+    gap: var(--space-xxl);
+  }
+
+  .header {
+    max-width: 100%;
+  }
+
+  .stepsContainer {
+    min-height: auto;
+    gap: var(--space-lg);
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: stretch;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .stepCard {
+    width: 100% !important;
+    max-width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: var(--space-lg);
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .stepCardActive,
+  .stepCardInactive {
+    width: 100% !important;
+    height: auto !important;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .stepCardInactive {
+    opacity: 1;
+  }
+
+  .stepCardInactive:hover {
+    opacity: 1;
+  }
+
+  /* Show active content for all steps on mobile - override inactive state */
+  .stepCardInactive .activeContent {
+    display: flex !important;
+    width: 100%;
+  }
+
+  /* Hide inactive step number on all cards in mobile (all cards are active state) */
+  .stepCard .stepNumberInactive {
+    display: none;
+  }
+
+  .stepNumberActive {
+    text-align: left;
+    width: 100%;
+  }
+
+  .activeContent {
+    animation: none;
+  }
+
+  .videoFrame {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stepTitle {
+    min-height: auto;
+  }
+
+  .stepDescription {
+    min-height: auto;
+  }
+
+  .carouselDots {
+    display: none;
+  }
 }

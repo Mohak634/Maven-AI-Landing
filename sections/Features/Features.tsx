@@ -27,7 +27,7 @@ const features: Feature[] = [
     id: 'feature-3',
     label: 'Feature 3',
     description: 'Description for feature 3 goes here.',
-    imageSrc: '/Features/Integrations.png',
+    imageSrc: '/Features/Bg.png',
   },
   {
     id: 'feature-4',
@@ -86,6 +86,11 @@ function FeatureContent({ feature }: FeatureContentProps) {
           </div>
         </div>
       </div>
+      <div className={styles.featureDescription}>
+        <p className={styles.featureDescriptionText}>
+          {feature.description}
+        </p>
+      </div>
     </div>
   )
 }
@@ -108,14 +113,39 @@ export default function Features() {
               />
             ))}
           </div>
-          <div className={styles.featureDescription}>
-            <p className={styles.featureDescriptionText}>
-              {features[activeFeatureIndex].description}
-            </p>
-          </div>
         </div>
         <div className={styles.rightPane}>
           <FeatureContent feature={activeFeature} />
+        </div>
+        <div className={styles.mobileFeaturesList}>
+          {features.map((feature) => (
+            <div key={feature.id} className={styles.mobileFeatureCard}>
+              <div className={styles.mobileFeatureVisual}>
+                <div className={styles.mobileFeatureBgContainer}>
+                  <div className={styles.mobileFeatureBgLayer}>
+                    <div className={styles.mobileFeatureBgGradient} />
+                    <div className={styles.mobileFeatureBgImageWrapper}>
+                      <img 
+                        src="/Features/Bg.png" 
+                        alt="" 
+                        className={styles.mobileFeatureBgImage}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.mobileFeatureBgShadow} />
+                </div>
+                <div className={styles.mobileFeatureImageWrapper}>
+                  <img 
+                    src={feature.imageSrc} 
+                    alt={feature.label}
+                    className={styles.mobileFeatureImage}
+                  />
+                </div>
+              </div>
+              <h3 className={styles.mobileFeatureTitle}>{feature.label}</h3>
+              <p className={styles.mobileFeatureDescription}>{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

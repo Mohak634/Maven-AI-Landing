@@ -10,12 +10,12 @@ type SecurityFeature = {
 
 const securityFeatures: SecurityFeature[] = [
   {
-    iconSrc: '/security/Security Icon.svg',
+    iconSrc: '/security/Security Icon-3.svg',
     iconAlt: 'No Training on User Data',
     title: 'No Training on User Data',
   },
   {
-    iconSrc: '/security/Security Icon-1.svg',
+    iconSrc: '/security/Security Icon.svg',
     iconAlt: 'Industry Standard Encryption',
     title: 'Industry Standard Encryption',
   },
@@ -25,7 +25,7 @@ const securityFeatures: SecurityFeature[] = [
     title: 'Full Data Transparency',
   },
   {
-    iconSrc: '/security/Security Icon-3.svg',
+    iconSrc: '/security/Security Icon-1.svg',
     iconAlt: 'Detailed Audit Logs',
     title: 'Detailed Audit Logs',
   },
@@ -46,8 +46,8 @@ export default function Security() {
             rel="noopener noreferrer"
             className={styles.ctaLink}
           >
-            <Button variant="primary" showTrailingIcon>
-              Request Demo
+            <Button variant="primary">
+              Learn More
             </Button>
           </a>
         </div>

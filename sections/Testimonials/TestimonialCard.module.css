@@ -1,81 +1,92 @@
 .card {
   background-color: var(--surface-primary);
   border-radius: var(--border-radius-xs);
-  padding: 30px;
+  padding: 3rem;
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: width 0.5s ease, height 0.5s ease, filter 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
   will-change: transform, filter, width, height, opacity;
   flex-shrink: 0;
+  position: relative;
 }
 
 .cardActive {
-  width: 768px;
-  height: 392px;
+  width: 76.8rem;
+  min-height: 39.2rem;
+  aspect-ratio: 768 / 392;
   box-shadow: var(--shadow-drop-medium);
   z-index: 10;
   filter: blur(0);
 }
 
 .cardInactive {
-  width: 708px;
-  height: 362px;
+  width: 70.8rem;
+  min-height: 36.2rem;
+  aspect-ratio: 708 / 362;
   box-shadow: var(--shadow-drop-medium);
   z-index: 1;
-  filter: blur(2px);
+  filter: blur(0.2rem);
   opacity: 0.7;
 }
 
-.picture {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+.quoteMarkTop {
+  position: absolute;
+  top: 8rem;
+  left: 4rem;
+  font-family: var(--typography-display-xl-family);
+  font-size: 10rem;
+  line-height: 1;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.imageWrapper {
-  width: 104px;
-  height: 104px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.quoteMarkBottom {
+  position: absolute;
+  bottom: 12rem;
+  right: 4rem;
+  font-family: var(--typography-display-xl-family);
+  font-size: 10rem;
+  line-height: 1;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+  gap: var(--space-lg);
   min-width: 0;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 .cardActive .content {
-  height: 332px;
-  max-width: 584px;
+  max-width: 58.4rem;
 }
 
 .cardInactive .content {
-  height: 312px;
-  max-width: 510px;
+  max-width: 51rem;
 }
 
 .quote {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   flex: 1;
+  margin-bottom: var(--space-lg);
 }
 
 .quoteText {
@@ -92,8 +103,8 @@
 .details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
+  gap: var(--space-xs);
+  align-items: center;
   width: 100%;
 }
 

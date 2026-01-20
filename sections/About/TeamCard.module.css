@@ -1,8 +1,9 @@
 .outerCard {
-  width: 444px;
-  height: 553px;
+  width: 100%;
+  max-width: 44.4rem;
+  aspect-ratio: 444 / 553;
   background-color: var(--surface-secondary);
-  border: 3px dashed var(--surface-neutral);
+  border: 0.3rem dashed var(--surface-neutral);
   border-radius: var(--border-radius-xs);
   border-image: none;
   display: flex;
@@ -14,29 +15,50 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .outerCard {
+    max-width: 85%;
+    flex-shrink: 1;
+    aspect-ratio: 1 / 1.5;
+    border: none;
+  }
+}
+
 
 .outerCard:hover {
   border-style: solid;
 }
+@media(max-width: 768px) {
+  .outerCard:hover {
+    border-style: none;
+  }
+}
 
 .innerCard {
-  width: 388px;
-  height: 511px;
+  width: 100%;
   background-color: var(--surface-primary);
   border-radius: var(--border-radius-xs);
   box-shadow: var(--shadow-drop-medium);
-  padding: 30px;
+  padding: 3.3rem;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .innerCard {
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+  }
+}
+
 .imageFrame {
-  width: 330px;
-  height: 360px;
+  width: 100%;
+  max-width: 40rem;
+  aspect-ratio: 330 / 390;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,18 +66,25 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .imageFrame {
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+}
+
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border: 1px solid var(--surface-primary);
+  border: 0.1rem solid var(--surface-primary);
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.5rem;
   align-items: flex-start;
   width: 100%;
 }
