@@ -11,7 +11,7 @@
 
 html {
   scroll-behavior: auto;
-  font-size: clamp(42.5%, 0.70vw, 50%);
+  font-size: clamp(40.5%, 0.70vw, 48%);
 }
 
 body {
