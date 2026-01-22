@@ -39,6 +39,12 @@ const useCases: UseCase[] = [
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
+  {
+    label: 'Use Case Here',
+    description:
+      'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
+    videoSrc: 'videos/useCases/Research.mp4',
+  },
 ]
 
 export default function UseCases() {

@@ -183,6 +183,8 @@
     font-size: var(--typography-content-xl-size);
     line-height: var(--typography-content-xl-line-height);
     font-weight: var(--typography-content-xl-weight);
+    align-self: center;
+    text-align: center;
   }
 
   .address {
@@ -190,6 +192,8 @@
     font-size: var(--typography-content-md-size);
     line-height: var(--typography-content-md-line-height);
     font-weight: var(--typography-content-md-weight);
+    align-self: center;
+    text-align: center;
   }
   
   .logoWrapper {
@@ -210,7 +214,7 @@
 
   .linksSection {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     align-items: flex-start;
     justify-content: flex-start;
     padding: var(--space-sm) 0;
@@ -224,28 +228,46 @@
     max-width: 100%;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .linkGroups {
     flex-direction: column;
     gap: var(--space-md);
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     width: 100%;
     max-width: 100%;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .footerLink {
     font-size: var(--typography-content-md-size);
     line-height: var(--typography-content-md-line-height);
+    align-self: center;
+    text-align: center;
   }
 
   .linkGroup {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    align-self: center;
+    text-align: center;
+  }
+
+  .linkGroupHeading {
+    text-align: center;
+  }
+
+  .linkList {
+    align-items: center;
+  }
+
+  .linkList li {
+    text-align: center;
   }
 
   .copyright {

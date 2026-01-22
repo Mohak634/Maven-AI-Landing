@@ -125,3 +125,105 @@
   color: var(--surface-neutral);
   margin: 0;
 }
+
+/* Desktop Layout - retain structure above 1230px */
+@media (min-width: 123rem) {
+  .card {
+    padding: 3rem;
+  }
+
+  .cardActive {
+    width: 76.8rem;
+    min-height: 39.2rem;
+    aspect-ratio: 768 / 392;
+  }
+
+  .cardInactive {
+    width: 70.8rem;
+    min-height: 36.2rem;
+    aspect-ratio: 708 / 362;
+  }
+
+  .quoteMarkTop {
+    top: 8rem;
+    left: 4rem;
+    font-size: 10rem;
+  }
+
+  .quoteMarkBottom {
+    bottom: 12rem;
+    right: 4rem;
+    font-size: 10rem;
+  }
+
+  .content {
+    gap: var(--space-lg);
+    padding: 0;
+  }
+
+  .cardActive .content {
+    max-width: 58.4rem;
+  }
+
+  .cardInactive .content {
+    max-width: 51rem;
+  }
+
+  .quote {
+    margin-bottom: var(--space-lg);
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 76.8rem) {
+  .card {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cardActive {
+    width: 40rem;
+    max-width: 40rem;
+    min-height: 58rem;
+    aspect-ratio: 280 / 380;
+  }
+
+  .cardInactive {
+    width: 38rem;
+    max-width: 38rem;
+    min-height: 55rem;
+    aspect-ratio: 252 / 342;
+  }
+
+  .quoteMarkTop {
+    top: 8rem;
+    left: 1.5rem;
+    font-size: 10rem;
+  }
+
+  .quoteMarkBottom {
+    bottom: 16rem;
+    right: 1.5rem;
+    font-size: 10rem;
+  }
+
+  .content {
+    gap: var(--space-md);
+    padding: 1rem;
+  }
+
+  .cardActive .content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cardInactive .content {
+    max-width: 120%;
+    width: 120%;
+  }
+
+  .quote {
+    margin-bottom: var(--space-xxl);
+  }
+}

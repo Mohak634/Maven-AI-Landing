@@ -1,6 +1,6 @@
 .outerCard {
   width: 100%;
-  max-width: 44.4rem;
+  max-width: 38rem;
   aspect-ratio: 444 / 553;
   background-color: var(--surface-secondary);
   border: 0.3rem dashed var(--surface-neutral);
@@ -13,6 +13,12 @@
   flex-shrink: 0;
   transition: border-style var(--hover-transition);
   cursor: pointer;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .outerCard {
+    max-width: 32rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -57,13 +63,19 @@
 
 .imageFrame {
   width: 100%;
-  max-width: 40rem;
+  max-width: 34rem;
   aspect-ratio: 330 / 390;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .imageFrame {
+    max-width: 28rem;
+  }
 }
 
 @media (max-width: 768px) {

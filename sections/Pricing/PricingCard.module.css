@@ -3,7 +3,7 @@
   padding: var(--space-xxl) var(--space-lg);
   border-radius: var(--border-radius-xs);
   box-shadow: var(--shadow-drop-medium);
-  width: 50%;
+  width: 100%;
   max-width: 53.333rem;
   flex-shrink: 0;
   transition: box-shadow var(--hover-transition);

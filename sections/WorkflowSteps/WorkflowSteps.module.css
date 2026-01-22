@@ -99,6 +99,10 @@
   display: none;
 }
 
+.stepCardActive .stepNumberInactive {
+  display: none;
+}
+
 .stepCardInactive:hover {
   opacity: var(--hover-opacity);
 }

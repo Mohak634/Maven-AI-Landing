@@ -42,3 +42,62 @@
   transition: transform 0.5s ease;
   will-change: transform;
 }
+
+/* Tablet Layout - horizontal scroll, no carousel */
+@media (min-width: 769px) and (max-width: 1229px) {
+  .carouselContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .carouselList {
+    transform: none !important;
+    transition: none;
+    width: max-content;
+    padding: 0 var(--layout-container-padding-x);
+  }
+}
+
+/* Desktop Layout - retain structure above 1230px */
+@media (min-width: 1230px) {
+  .testimonials {
+    padding: 7rem var(--layout-container-padding-x);
+    gap: 2.5rem;
+  }
+
+  .carouselContainer {
+    min-height: 46.5rem;
+    overflow: hidden;
+  }
+
+  .carouselList {
+    gap: var(--space-md);
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 4rem var(--layout-container-padding-x);
+    gap: 1.5rem;
+  }
+
+  .carouselContainer {
+    min-height: 70rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: clip;
+    position: relative;
+  }
+
+  .carouselList {
+    width: max-content;
+  }
+
+  .carouselList {
+    gap: 2rem;
+  }
+}

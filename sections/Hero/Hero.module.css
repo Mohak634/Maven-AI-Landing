@@ -23,8 +23,11 @@
 .backgroundImage {
   display: flex;
   width: 100vw;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
   height: 100vh;
-  object-fit: auto;
+  object-fit: cover;
   object-position: center;
 }
 

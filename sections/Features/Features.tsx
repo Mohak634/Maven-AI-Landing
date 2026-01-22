@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Features.module.css'
 
 type Feature = {
@@ -13,26 +13,32 @@ type Feature = {
 const features: Feature[] = [
   {
     id: 'feature-1',
-    label: 'Feature 1',
-    description: 'Description for feature 1 goes here.',
-    imageSrc: '/Features/Integrations.png',
+    label: 'Assistant',
+    description: 'Your AI assistant, always ready to help you with your tasks and projects.',
+    imageSrc: '/Features/Assistant.png',
   },
   {
     id: 'feature-2',
-    label: 'Feature 2',
-    description: 'Description for feature 2 goes here.',
-    imageSrc: '/Features/Bg.png',
+    label: 'Integrations',
+    description: 'Maven integrates with your existing tools and workflows to provide a seamless experience.',
+    imageSrc: '/Features/Integrations.png',
   },
   {
     id: 'feature-3',
-    label: 'Feature 3',
-    description: 'Description for feature 3 goes here.',
-    imageSrc: '/Features/Bg.png',
+    label: 'Knowledge',
+    description: 'Maven uses your organization\'s knowledge base to help you with your tasks and projects.',
+    imageSrc: '/Features/Knowledge.png',
   },
   {
     id: 'feature-4',
-    label: 'Feature 4',
+    label: 'Vault',
     description: 'Description for feature 4 goes here.',
+    imageSrc: '/Features/Integrations.png',
+  },
+  {
+    id: 'feature-5',
+    label: 'Workflows',
+    description: 'Description for feature 5 goes here.',
     imageSrc: '/Features/Integrations.png',
   },
 ]
@@ -57,9 +63,10 @@ function FeatureTab({ label, isActive, onClick }: FeatureTabProps) {
 
 type FeatureContentProps = {
   feature: Feature
+  isAnimating: boolean
 }
 
-function FeatureContent({ feature }: FeatureContentProps) {
+function FeatureContent({ feature, isAnimating }: FeatureContentProps) {
   return (
     <div className={styles.featureContent}>
       <div className={styles.scrollerContent}>
@@ -76,7 +83,7 @@ function FeatureContent({ feature }: FeatureContentProps) {
           </div>
           <div className={styles.bgShadow} />
         </div>
-        <div className={styles.contentFrame}>
+        <div className={`${styles.contentFrame} ${isAnimating ? styles.contentFrameAnimating : ''}`}>
           <div className={styles.pngFrame}>
             <img 
               src={feature.imageSrc} 
@@ -86,7 +93,7 @@ function FeatureContent({ feature }: FeatureContentProps) {
           </div>
         </div>
       </div>
-      <div className={styles.featureDescription}>
+      <div className={`${styles.featureDescription} ${isAnimating ? styles.featureDescriptionAnimating : ''}`}>
         <p className={styles.featureDescriptionText}>
           {feature.description}
         </p>
@@ -97,7 +104,21 @@ function FeatureContent({ feature }: FeatureContentProps) {
 
 export default function Features() {
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const previousIndexRef = useRef(0)
   const activeFeature = features[activeFeatureIndex]
+
+  useEffect(() => {
+    if (previousIndexRef.current !== activeFeatureIndex) {
+      setIsAnimating(true)
+      const timer = setTimeout(() => {
+        setIsAnimating(false)
+      }, 600) // Match animation duration
+      
+      previousIndexRef.current = activeFeatureIndex
+      return () => clearTimeout(timer)
+    }
+  }, [activeFeatureIndex])
 
   return (
     <section id="features" className={styles.features}>
@@ -115,7 +136,7 @@ export default function Features() {
           </div>
         </div>
         <div className={styles.rightPane}>
-          <FeatureContent feature={activeFeature} />
+          <FeatureContent feature={activeFeature} isAnimating={isAnimating} />
         </div>
         <div className={styles.mobileFeaturesList}>
           {features.map((feature) => (

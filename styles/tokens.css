@@ -193,33 +193,33 @@
      ============================================ */
   
   /* Drop Shadows */
-  --shadow-drop-small: -3px 3px 6px rgba(0, 0, 0, 0.5);
-  --shadow-drop-medium: -3px 3px 10px rgba(0, 0, 0, 0.25);
+  --shadow-drop-small: -2px 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-drop-medium: -2px 2px 6px rgba(0, 0, 0, 0.12);
   
   /* Inner Shadows */
-  --shadow-inner-text: inset 6px 5px 8px rgba(0, 0, 0, 0.5);
-  --shadow-inner-small: inset -2px 2px 2px rgba(0, 0, 0, 0.35);
+  --shadow-inner-text: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-inner-small: inset -1px 1px 2px rgba(0, 0, 0, 0.15);
   --shadow-inner-card: 
-    inset -4px 4px 11px rgba(0, 0, 0, 0.1),
-    inset -1px 5px 11px rgba(0, 0, 0, 0.09);
+    inset -2px 2px 4px rgba(0, 0, 0, 0.06),
+    inset -1px 2px 4px rgba(0, 0, 0, 0.05);
     /* inset -33px 33px 28px rgba(0, 0, 0, 0.05),
     inset -59px 59px 33px rgba(0, 0, 0, 0.01),
     inset -92px 92px 37px rgba(0, 0, 0, 0); */
   
   /* Card Effects */
   --shadow-card-inactive: 
-    0 -2px 6px rgba(0, 0, 0, 0.2),
-    0 -8px 12px rgba(0, 0, 0, 0.17),
-    0 -19px 16px rgba(0, 0, 0, 0.1),
-    0 -33px 19px rgba(0, 0, 0, 0.03),
-    0 -52px 20px rgba(0, 0, 0, 0);
+    0 -1px 3px rgba(0, 0, 0, 0.1),
+    0 -3px 6px rgba(0, 0, 0, 0.08),
+    0 -6px 8px rgba(0, 0, 0, 0.05),
+    0 -10px 10px rgba(0, 0, 0, 0.02),
+    0 -15px 12px rgba(0, 0, 0, 0);
   
   --shadow-card-active: 
-    0 -2px 6px rgba(0, 0, 0, 0.2),
-    0 -8px 12px rgba(0, 0, 0, 0.17),
-    0 -19px 16px rgba(0, 0, 0, 0.1),
-    0 -33px 19px rgba(0, 0, 0, 0.03),
-    0 -52px 20px rgba(0, 0, 0, 0);
+    0 -1px 3px rgba(0, 0, 0, 0.1),
+    0 -3px 6px rgba(0, 0, 0, 0.08),
+    0 -6px 8px rgba(0, 0, 0, 0.05),
+    0 -10px 10px rgba(0, 0, 0, 0.02),
+    0 -15px 12px rgba(0, 0, 0, 0);
   
   /* ============================================
      COMPONENT-SPECIFIC TOKENS

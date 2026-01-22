@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Testimonials.module.css'
 import TestimonialCard from './TestimonialCard'
 
@@ -51,33 +51,83 @@ export default function Testimonials() {
   // Start at the center-most card
   const initialIndex = Math.floor(testimonials.length / 2)
   const [activeIndex, setActiveIndex] = useState(initialIndex)
+  const [isMobile, setIsMobile] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
+  const [isTablet, setIsTablet] = useState(false)
+
+  useEffect(() => {
+    const checkViewport = () => {
+      const width = window.innerWidth
+      // Use mobile layout only below 768px
+      setIsMobile(width <= 768)
+      // Use desktop dimensions at 1230px and above
+      setIsDesktop(width >= 1230)
+      // Tablet is between 769px and 1229px
+      setIsTablet(width > 768 && width < 1230)
+    }
+
+    checkViewport()
+    window.addEventListener('resize', checkViewport)
+    return () => window.removeEventListener('resize', checkViewport)
+  }, [])
 
   // Card dimensions and spacing (in rem, assuming 1rem = 10px)
-  const ACTIVE_CARD_WIDTH = 76.8 // 768px = 76.8rem
-  const INACTIVE_CARD_WIDTH = 70.8 // 708px = 70.8rem
-  const CARD_GAP = 2 // 20px = 2rem (using --space-md = 1.6rem, but 2rem is closer to design)
+  // Desktop dimensions (used at 769px and above, default styles)
+  const ACTIVE_CARD_WIDTH_DESKTOP = 76.8 // 768px = 76.8rem
+  const INACTIVE_CARD_WIDTH_DESKTOP = 70.8 // 708px = 70.8rem
+  const CARD_GAP_DESKTOP = 2 // 20px = 2rem
+
+  // Mobile dimensions (matching CSS values, used below 768px)
+  const ACTIVE_CARD_WIDTH_MOBILE = 40 // 40rem (400px)
+  const INACTIVE_CARD_WIDTH_MOBILE = 38 // 38rem (380px)
+  const CARD_GAP_MOBILE = 2 // 2rem (20px)
+
+  // Use responsive dimensions
+  // Mobile: <= 768px uses mobile dimensions
+  // Tablet/Desktop: > 768px uses desktop dimensions (default CSS styles)
+  // At 1230px+ explicitly uses desktop dimensions (CSS media query)
+  const ACTIVE_CARD_WIDTH = isMobile ? ACTIVE_CARD_WIDTH_MOBILE : ACTIVE_CARD_WIDTH_DESKTOP
+  const INACTIVE_CARD_WIDTH = isMobile ? INACTIVE_CARD_WIDTH_MOBILE : INACTIVE_CARD_WIDTH_DESKTOP
+  const CARD_GAP = isMobile ? CARD_GAP_MOBILE : CARD_GAP_DESKTOP
+
   // Spacing between card centers (using inactive width + gap for simpler calculation)
   const CARD_SPACING = INACTIVE_CARD_WIDTH + CARD_GAP
 
-  const handleCardClick = (targetIndex: number) => {
-    // Ensure index wraps around for infinite looping
-    const wrappedIndex = ((targetIndex % testimonials.length) + testimonials.length) % testimonials.length
-    setActiveIndex(wrappedIndex)
+  // Normalize index to always be within bounds (0 to testimonials.length - 1)
+  const normalizeIndex = (index: number): number => {
+    // Handle negative indices properly
+    if (index < 0) {
+      const mod = index % testimonials.length
+      return mod < 0 ? mod + testimonials.length : mod
+    }
+    // Handle indices >= length
+    if (index >= testimonials.length) {
+      return index % testimonials.length
+    }
+    return index
   }
 
-  // Helper function to get the wrapped index for display calculations
-  const getWrappedIndex = (index: number) => {
-    return ((index % testimonials.length) + testimonials.length) % testimonials.length
+  const handleCardClick = (targetIndex: number) => {
+    // Normalize the target index to ensure it's within bounds
+    const normalizedIndex = normalizeIndex(targetIndex)
+    setActiveIndex(normalizedIndex)
   }
 
   // Calculate transform to center the active card
   // We need to account for half the active card width plus spacing for previous cards
   const calculateTransform = () => {
     const halfActiveWidth = ACTIVE_CARD_WIDTH / 2
+    
+    // Normalize the active index to ensure it's within bounds
+    const normalizedIndex = normalizeIndex(activeIndex)
+    
     // For each previous card, account for inactive width + gap
-    const previousCardsOffset = activeIndex * CARD_SPACING
+    const previousCardsOffset = normalizedIndex * CARD_SPACING
     return `translateX(calc(50% - ${halfActiveWidth + previousCardsOffset}rem))`
   }
+
+  // Get normalized active index for rendering
+  const normalizedActiveIndex = normalizeIndex(activeIndex)
 
   return (
     <section id="testimonials" className={styles.testimonials}>
@@ -86,9 +136,18 @@ export default function Testimonials() {
       </h2>
 
       <div className={styles.carouselContainer}>
-        <div className={styles.carouselList} style={{ transform: calculateTransform() }}>
+        <div
+          className={styles.carouselList}
+          style={
+            isTablet
+              ? undefined
+              : { transform: calculateTransform() }
+          }
+        >
           {testimonials.map((testimonial, index) => {
-            const isActive = index === activeIndex
+            // On tablet, all cards are active (horizontal scroll)
+            // On mobile and desktop, use carousel logic
+            const isActive = isTablet ? true : index === normalizedActiveIndex
 
             return (
               <TestimonialCard
@@ -98,7 +157,7 @@ export default function Testimonials() {
                 position={testimonial.position}
                 imagePath={testimonial.imagePath}
                 isActive={isActive}
-                onClick={() => handleCardClick(index)}
+                onClick={isTablet ? undefined : () => handleCardClick(index)}
               />
             )
           })}
