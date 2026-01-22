@@ -10,37 +10,37 @@ type UseCase = {
 
 const useCases: UseCase[] = [
   {
-    label: 'Use Case Here',
+    label: 'Research',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/hero-demo.mp4',
   },  
   {
-    label: 'Use Case Here',
+    label: 'Citations',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Use Case Here',
+    label: 'Blablabla',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Use Case Here',
+    label: 'Hehehehe',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Use Case Here',
+    label: 'Shakalaka',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Use Case Here',
+    label: 'Boomboom',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',

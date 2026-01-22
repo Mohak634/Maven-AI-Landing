@@ -32,14 +32,14 @@ const features: Feature[] = [
   {
     id: 'feature-4',
     label: 'Vault',
-    description: 'Description for feature 4 goes here.',
-    imageSrc: '/Features/Integrations.png',
+    description: 'Maven stores your files and documents in a secure vault, so you can access them anytime.',
+    imageSrc: '/Features/Vault.png',
   },
   {
     id: 'feature-5',
     label: 'Workflows',
-    description: 'Description for feature 5 goes here.',
-    imageSrc: '/Features/Integrations.png',
+    description: 'Maven allows you to create and manage your workflows, so you can automate those repetitive tasks.',
+    imageSrc: '/Features/Vault.png',
   },
 ]
 
