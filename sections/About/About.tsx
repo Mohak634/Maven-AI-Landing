@@ -8,17 +8,17 @@ export default function About() {
       
       <div className={styles.teamGrid}>
         <TeamCard
-          imagePath="/team/akshat.jpg"
+          imagePath="/Team/akshat.jpg"
           name="Akshat Ajmera"
           role="Finance Lead"
         />
         <TeamCard
-          imagePath="/team/akshat.jpg"
+          imagePath="/Team/akshat.jpg"
           name="Yuv Bindal"
           role="Tech Lead"
         />
         <TeamCard
-          imagePath="/team/akshat.jpg"
+          imagePath="/Team/akshat.jpg"
           name="Shayaan"
           role="Tech Lead"
         />
