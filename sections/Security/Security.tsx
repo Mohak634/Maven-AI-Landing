@@ -10,22 +10,22 @@ type SecurityFeature = {
 
 const securityFeatures: SecurityFeature[] = [
   {
-    iconSrc: '/security/Security Icon-3.svg',
+    iconSrc: '/Security/Security Icon-3.svg',
     iconAlt: 'No Training on User Data',
     title: 'No Training on User Data',
   },
   {
-    iconSrc: '/security/Security Icon.svg',
+    iconSrc: '/Security/Security Icon.svg',
     iconAlt: 'Industry Standard Encryption',
     title: 'Industry Standard Encryption',
   },
   {
-    iconSrc: '/security/Security Icon-2.svg',
+    iconSrc: '/Security/Security Icon-2.svg',
     iconAlt: 'Full Data Transparency',
     title: 'Full Data Transparency',
   },
   {
-    iconSrc: '/security/Security Icon-1.svg',
+    iconSrc: '/Security/Security Icon-1.svg',
     iconAlt: 'Detailed Audit Logs',
     title: 'Detailed Audit Logs',
   },
