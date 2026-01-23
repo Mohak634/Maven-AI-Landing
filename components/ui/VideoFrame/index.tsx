@@ -105,9 +105,13 @@ export default function VideoFrame({
           <div className={styles.expandedVideoContainer}>
             {isValidElement(children)
               ? cloneElement(children, {
-                  ...children.props,
                   key: 'expanded-video',
-                  style: { ...children.props.style, width: '100%', height: 'auto', maxHeight: '100vh' },
+                  style: {
+                    ...(children.props.style ?? {}),
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '100vh',
+                  },
                 })
               : children || <div className={styles.placeholder} />}
           </div>
