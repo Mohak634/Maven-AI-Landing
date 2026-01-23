@@ -103,7 +103,7 @@ export default function VideoFrame({
             ×
           </button>
           <div className={styles.expandedVideoContainer}>
-            {isValidElement(children)
+            {isValidElement<React.HTMLAttributes<HTMLElement>>(children)
               ? cloneElement(children, {
                   key: 'expanded-video',
                   style: {
