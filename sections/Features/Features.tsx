@@ -218,8 +218,8 @@ export default function Features() {
       // Accumulate scroll delta
       scrollAccumulatorRef.current += e.deltaY
 
-      // Scroll threshold: 100px per tab switch
-      const SCROLL_THRESHOLD = 100
+      // Scroll threshold: 200px per tab switch
+      const SCROLL_THRESHOLD = 200
 
       if (Math.abs(scrollAccumulatorRef.current) >= SCROLL_THRESHOLD) {
         isScrollingRef.current = true
