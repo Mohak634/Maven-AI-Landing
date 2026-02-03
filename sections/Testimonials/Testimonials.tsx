@@ -72,15 +72,15 @@ export default function Testimonials() {
   }, [])
 
   // Card dimensions and spacing (in rem, assuming 1rem = 10px)
-  // Desktop dimensions (used at 769px and above, default styles)
-  const ACTIVE_CARD_WIDTH_DESKTOP = 76.8 // 768px = 76.8rem
-  const INACTIVE_CARD_WIDTH_DESKTOP = 70.8 // 708px = 70.8rem
-  const CARD_GAP_DESKTOP = 2 // 20px = 2rem
+  // Desktop dimensions (used at 769px and above, default styles) - increased by 10%
+  const ACTIVE_CARD_WIDTH_DESKTOP = 84.48 // 76.8rem * 1.1 = 84.48rem
+  const INACTIVE_CARD_WIDTH_DESKTOP = 77.88 // 70.8rem * 1.1 = 77.88rem
+  const CARD_GAP_DESKTOP = 2.2 // 2rem * 1.1 = 2.2rem
 
-  // Mobile dimensions (matching CSS values, used below 768px)
-  const ACTIVE_CARD_WIDTH_MOBILE = 40 // 40rem (400px)
-  const INACTIVE_CARD_WIDTH_MOBILE = 38 // 38rem (380px)
-  const CARD_GAP_MOBILE = 2 // 2rem (20px)
+  // Mobile dimensions (matching CSS values, used below 768px) - increased by 10%
+  const ACTIVE_CARD_WIDTH_MOBILE = 44 // 40rem * 1.1 = 44rem
+  const INACTIVE_CARD_WIDTH_MOBILE = 41.8 // 38rem * 1.1 = 41.8rem
+  const CARD_GAP_MOBILE = 2.2 // 2rem * 1.1 = 2.2rem
 
   // Use responsive dimensions
   // Mobile: <= 768px uses mobile dimensions
@@ -165,4 +165,4 @@ export default function Testimonials() {
       </div>
     </section>
   )
-}
+  }

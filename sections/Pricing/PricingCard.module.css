@@ -5,9 +5,27 @@
   box-shadow: var(--shadow-drop-medium);
   width: 100%;
   max-width: 53.333rem;
-  flex-shrink: 0;
+  flex: 1 1 48%;
+  min-width: 0;
   transition: box-shadow var(--hover-transition);
   position: relative;
+}
+
+/* Desktop and Tablet: Keep two columns until 90rem */
+@media (max-width: 90rem) {
+  .card {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+}
+
+/* Mobile: Full width, centered */
+@media (max-width: 76.8rem) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .card:hover {

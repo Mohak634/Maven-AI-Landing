@@ -119,49 +119,6 @@
   width: 100%;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 144rem) {
-  .security {
-    padding: 7rem var(--layout-container-padding-x);
-  }
-
-  .container {
-    flex-direction: grid;
-    gap: 0px
-  }
-
-  .leftColumn {
-    flex: 1 1 auto;
-    max-width: 40%;
-    min-height: auto;
-  }
-
-  .rightColumn {
-    max-width: 60%;
-  }
-
-  .grid {
-    max-width: 100%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(20rem, auto));
-  }
-
-  .gridItem {
-    padding: 4rem 4rem 4rem 4rem;
-    min-height: 30rem;
-    gap: 3rem;
-  }
-
-  .iconWrapper {
-    width: 15.3rem;
-    height: 15.3rem;
-  }
-
-  .featureTitle {
-    max-width: 100%;
-  }
-}
-
 /* Mobile layout - single column stack */
 @media (max-width: 76.8rem) {
   .security {

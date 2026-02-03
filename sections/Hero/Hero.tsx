@@ -34,7 +34,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className={styles.ctaLink}>
             <Button variant="primary" showTrailingIcon>
-              Try Free
+              Try for Free
             </Button>
           </a>
         </div>

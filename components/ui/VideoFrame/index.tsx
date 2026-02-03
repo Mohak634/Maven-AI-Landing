@@ -103,16 +103,22 @@ export default function VideoFrame({
             ×
           </button>
           <div className={styles.expandedVideoContainer}>
-            {isValidElement<React.HTMLAttributes<HTMLElement>>(children)
+            {isValidElement(children)
               ? cloneElement(children, {
                   key: 'expanded-video',
                   style: {
-                    ...(children.props.style ?? {}),
+                    ...(children.props && 
+                        typeof children.props === 'object' && 
+                        'style' in children.props &&
+                        children.props.style &&
+                        typeof children.props.style === 'object'
+                      ? children.props.style as React.CSSProperties
+                      : {}),
                     width: '100%',
                     height: 'auto',
                     maxHeight: '100vh',
                   },
-                })
+                } as React.HTMLAttributes<HTMLElement>)
               : children || <div className={styles.placeholder} />}
           </div>
         </div>

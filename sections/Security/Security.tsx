@@ -40,7 +40,7 @@ export default function Security() {
           <p className={styles.supportingCopy}>
             Maven ensures your data stays compliant with strict privacy and security standards.
           </p>
-          <a
+          {/* <a
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Request+Demo+with+Maven+AI"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function Security() {
             <Button variant="primary">
               Learn More
             </Button>
-          </a>
+          </a> */}
         </div>
         <div className={styles.rightColumn}>
           <div className={styles.grid}>

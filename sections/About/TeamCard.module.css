@@ -1,7 +1,7 @@
 .outerCard {
   width: 100%;
   max-width: 38rem;
-  aspect-ratio: 444 / 553;
+  aspect-ratio: 444 / 680;
   background-color: var(--surface-secondary);
   border: 0.3rem dashed var(--surface-neutral);
   border-radius: var(--border-radius-xs);
@@ -11,8 +11,17 @@
   justify-content: center;
   padding: 0;
   flex-shrink: 0;
-  transition: border-style var(--hover-transition);
+  transition: border-style var(--hover-transition), transform var(--hover-transition);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 769px) {
+  .outerCard:hover {
+    border-style: solid;
+    transform: scale(1.05);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -28,15 +37,10 @@
     aspect-ratio: 1 / 1.5;
     border: none;
   }
-}
-
-
-.outerCard:hover {
-  border-style: solid;
-}
-@media(max-width: 768px) {
+  
   .outerCard:hover {
     border-style: none;
+    transform: none;
   }
 }
 
@@ -81,7 +85,7 @@
 @media (max-width: 768px) {
   .imageFrame {
     max-width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 2.8;
   }
 }
 
@@ -116,6 +120,25 @@
   font-size: var(--typography-content-lg-size);
   line-height: var(--typography-content-lg-line-height);
   font-weight: var(--typography-content-lg-weight);
+  color: var(--text-secondary);
+  margin: 0;
+  width: 100%;
+}
+
+.keyPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: var(--space-sm);
+}
+
+.keyPoint {
+  font-family: var(--typography-content-sm-family);
+  font-size: var(--typography-content-sm-size);
+  line-height: var(--typography-content-sm-line-height);
+  font-weight: var(--typography-content-sm-weight);
   color: var(--text-secondary);
   margin: 0;
   width: 100%;

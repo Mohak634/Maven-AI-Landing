@@ -116,6 +116,13 @@
   margin: 0;
   text-align: left;
   min-width: fit-content;
+  position: relative;
+  /* text-shadow: 
+    0.4rem 0.4rem 0 rgba(255, 255, 255, 0.4),
+    0.8rem 0.8rem 0 rgba(255, 255, 255, 0.25),
+    0.6rem 0.6rem 0 rgba(255, 255, 255, 0.1),
+    -0.2rem -0.2rem 0.4rem rgba(0, 0, 0, 0.4),
+    -0.4rem -0.4rem 0.8rem rgba(0, 0, 0, 0.3); */
 }
 
 .stepNumberInactive {
@@ -126,6 +133,13 @@
   color: var(--text-neutral-800);
   margin: 0;
   text-align: center;
+  position: relative;
+  /* text-shadow: 
+    0.4rem 0.4rem 0 rgba(255, 255, 255, 0.4),
+    0.8rem 0.8rem 0 rgba(255, 255, 255, 0.25),
+    0.6rem 0.6rem 0 rgba(255, 255, 255, 0.1),
+    -0.2rem -0.2rem 0.4rem rgba(0, 0, 0, 0.4),
+    -0.4rem -0.4rem 0.8rem rgba(0, 0, 0, 0.3); */
 }
 
 .activeContent {

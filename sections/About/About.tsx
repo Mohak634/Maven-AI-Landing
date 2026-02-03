@@ -11,16 +11,28 @@ export default function About() {
           imagePath="/Team/akshat.jpg"
           name="Akshat Ajmera"
           role="Finance Lead"
+          keyPoint1="• Lorem ipsum dolor sit amet."
+          keyPoint2="• Lorem ipsum dolor sit amet."
+          keyPoint3="• Lorem ipsum dolor sit amet."
+          keyPoint4="• Lorem ipsum dolor sit amet."
         />
         <TeamCard
           imagePath="/Team/akshat.jpg"
           name="Yuv Bindal"
           role="Tech Lead"
+          keyPoint1="• Lorem ipsum dolor sit amet."
+          keyPoint2="• Lorem ipsum dolor sit amet."
+          keyPoint3="• Lorem ipsum dolor sit amet."
+          keyPoint4="• Lorem ipsum dolor sit amet."
         />
         <TeamCard
           imagePath="/Team/akshat.jpg"
           name="Shayaan"
           role="Tech Lead"
+          keyPoint1="• Lorem ipsum dolor sit amet."
+          keyPoint2="• Lorem ipsum dolor sit amet"
+          keyPoint3="• Lorem ipsum dolor sit amet."
+          keyPoint4="• Lorem ipsum dolor sit amet."
         />
       </div>
     </section>

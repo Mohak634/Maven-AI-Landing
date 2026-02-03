@@ -1,7 +1,7 @@
 .card {
   background-color: var(--surface-primary);
   border-radius: var(--border-radius-xs);
-  padding: 3rem;
+  padding: 3.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,8 @@
 }
 
 .cardActive {
-  width: 76.8rem;
-  min-height: 39.2rem;
+  width: 84.48rem;
+  min-height: 43.12rem;
   aspect-ratio: 768 / 392;
   box-shadow: var(--shadow-drop-medium);
   z-index: 10;
@@ -22,8 +22,8 @@
 }
 
 .cardInactive {
-  width: 70.8rem;
-  min-height: 36.2rem;
+  width: 77.88rem;
+  min-height: 39.82rem;
   aspect-ratio: 708 / 362;
   box-shadow: var(--shadow-drop-medium);
   z-index: 1;
@@ -33,8 +33,8 @@
 
 .quoteMarkTop {
   position: absolute;
-  top: 8rem;
-  left: 4rem;
+  top: 8.8rem;
+  left: 4.4rem;
   font-family: var(--typography-display-xl-family);
   font-size: 10rem;
   line-height: 1;
@@ -46,8 +46,8 @@
 
 .quoteMarkBottom {
   position: absolute;
-  bottom: 12rem;
-  right: 4rem;
+  bottom: 13.2rem;
+  right: 4.4rem;
   font-family: var(--typography-display-xl-family);
   font-size: 10rem;
   line-height: 1;
@@ -73,11 +73,11 @@
 }
 
 .cardActive .content {
-  max-width: 58.4rem;
+  max-width: 64.24rem;
 }
 
 .cardInactive .content {
-  max-width: 51rem;
+  max-width: 56.1rem;
 }
 
 .quote {
@@ -129,30 +129,30 @@
 /* Desktop Layout - retain structure above 1230px */
 @media (min-width: 123rem) {
   .card {
-    padding: 3rem;
+    padding: 3.3rem;
   }
 
   .cardActive {
-    width: 76.8rem;
-    min-height: 39.2rem;
+    width: 84.48rem;
+    min-height: 43.12rem;
     aspect-ratio: 768 / 392;
   }
 
   .cardInactive {
-    width: 70.8rem;
-    min-height: 36.2rem;
+    width: 77.88rem;
+    min-height: 39.82rem;
     aspect-ratio: 708 / 362;
   }
 
   .quoteMarkTop {
-    top: 8rem;
-    left: 4rem;
+    top: 8.8rem;
+    left: 4.4rem;
     font-size: 10rem;
   }
 
   .quoteMarkBottom {
-    bottom: 12rem;
-    right: 4rem;
+    bottom: 13.2rem;
+    right: 4.4rem;
     font-size: 10rem;
   }
 
@@ -162,11 +162,11 @@
   }
 
   .cardActive .content {
-    max-width: 58.4rem;
+    max-width: 64.24rem;
   }
 
   .cardInactive .content {
-    max-width: 51rem;
+    max-width: 56.1rem;
   }
 
   .quote {
@@ -177,40 +177,40 @@
 /* Mobile Layout */
 @media (max-width: 76.8rem) {
   .card {
-    padding: 2rem 1.5rem;
+    padding: 2.2rem 1.65rem;
     max-width: 100%;
     box-sizing: border-box;
   }
 
   .cardActive {
-    width: 40rem;
-    max-width: 40rem;
-    min-height: 58rem;
+    width: 44rem;
+    max-width: 44rem;
+    min-height: 63.8rem;
     aspect-ratio: 280 / 380;
   }
 
   .cardInactive {
-    width: 38rem;
-    max-width: 38rem;
-    min-height: 55rem;
+    width: 41.8rem;
+    max-width: 41.8rem;
+    min-height: 60.5rem;
     aspect-ratio: 252 / 342;
   }
 
   .quoteMarkTop {
-    top: 8rem;
-    left: 1.5rem;
+    top: 8.8rem;
+    left: 1.65rem;
     font-size: 10rem;
   }
 
   .quoteMarkBottom {
-    bottom: 16rem;
-    right: 1.5rem;
+    bottom: 17.6rem;
+    right: 1.65rem;
     font-size: 10rem;
   }
 
   .content {
     gap: var(--space-md);
-    padding: 1rem;
+    padding: 1.1rem;
   }
 
   .cardActive .content {

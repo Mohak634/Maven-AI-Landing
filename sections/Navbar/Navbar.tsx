@@ -67,13 +67,20 @@ export default function Navbar() {
           </div>
 
           <nav className={styles.nav}>
-            <NavLink href="#solutions">Solutions</NavLink>
+            <NavLink href="#features">Solutions</NavLink>
             <NavLink href="#security">Security</NavLink>
             <NavLink href="#pricing">Pricing</NavLink>
           </nav>
 
           <div className={styles.cta}>
-            <Button variant="primary">Request Demo</Button>
+            <a 
+              href="https://calendar.app.google/gPg34HLf928hQaeR8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none' }}
+            >
+              <Button variant="primary">Request Demo</Button>
+            </a>
           </div>
 
           <button 
@@ -121,14 +128,22 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <nav className={styles.mobileMenuNav}>
-            <NavLink href="#solutions" onClick={closeMobileMenu}>Solutions</NavLink>
+            <NavLink href="#features" onClick={closeMobileMenu}>Solutions</NavLink>
             <NavLink href="#security" onClick={closeMobileMenu}>Security</NavLink>
             <NavLink href="#pricing" onClick={closeMobileMenu}>Pricing</NavLink>
           </nav>
 
           {/* CTA Button */}
           <div className={styles.mobileMenuCta}>
-            <Button variant="primary" onClick={closeMobileMenu}>Request Demo</Button>
+            <a 
+              href="https://calendar.app.google/gPg34HLf928hQaeR8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+              style={{ textDecoration: 'none', width: '100%', display: 'block' }}
+            >
+              <Button variant="primary">Request Demo</Button>
+            </a>
           </div>
         </div>
       </div>

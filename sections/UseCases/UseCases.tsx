@@ -22,25 +22,25 @@ const useCases: UseCase[] = [
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Blablabla',
+    label: 'UseCase3',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Hehehehe',
+    label: 'UseCase4',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Shakalaka',
+    label: 'UseCase5',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
   },
   {
-    label: 'Boomboom',
+    label: 'UseCase6',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
     videoSrc: 'videos/useCases/Research.mp4',
