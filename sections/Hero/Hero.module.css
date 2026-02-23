@@ -157,4 +157,14 @@
   .mockupContainer {
     margin-top: var(--space-lg);
   }
+
+  .headline {
+  font-family: var(--typography-display-xl-family);
+  font-size: var(--typography-display-xl-size);
+  line-height: var(--typography-display-xl-line-height);
+  font-weight: var(--typography-display-xl-weight);
+  color: var(--text-primary);
+  margin: 0;
+  width: 100%;
+}
 }

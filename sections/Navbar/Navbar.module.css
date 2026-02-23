@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background-color: var(--surface-secondary);
+  background-color: rgba(var(--surface-primary), 1.0);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -17,11 +17,11 @@
 }
 
 .navbar.hidden {
-  transform: translateY(-100%);
+  transform: translateY(0%);
 }
 
 .container {
-  max-width: var(--layout-container-max-width);
+  max-width: calc(var(--layout-container-max-width) + 9 * var(--space-xxxl));
   width: 100%;
   height: var(--navbar-height);
   margin: 0 auto;

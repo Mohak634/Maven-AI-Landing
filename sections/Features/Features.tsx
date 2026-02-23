@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import styles from './Features.module.css'
+import ScrollSection from '@/components/ScrollSection'
 
 type Feature = {
   id: string
@@ -271,6 +272,7 @@ export default function Features() {
   // The sticky behavior will work with the natural section height
 
   return (
+    <ScrollSection>
     <section 
       id="features" 
       ref={sectionRef}
@@ -327,5 +329,6 @@ export default function Features() {
         </div>
       </div>
     </section>
+    </ScrollSection>
   )
 }

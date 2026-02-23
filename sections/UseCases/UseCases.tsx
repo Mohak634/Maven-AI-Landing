@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './UseCases.module.css'
 import VideoFrame from '@/components/ui/VideoFrame'
+import ScrollSection from '@/components/ScrollSection'
 
 type UseCase = {
   label: string
@@ -52,6 +53,7 @@ export default function UseCases() {
   const activeUseCase = useCases[activeIndex]
 
   return (
+    <ScrollSection>
     <section id="usecases" className={styles.useCases}>
       <div className={styles.container}>
         <h2 className={styles.heading}>Real Work. Real Impact</h2>
@@ -88,5 +90,6 @@ export default function UseCases() {
         </div>
       </div>
     </section>
+    </ScrollSection>
   )
 }

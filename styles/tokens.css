@@ -201,10 +201,10 @@
   --shadow-inner-small: inset -1px 1px 2px rgba(0, 0, 0, 0.15);
   --shadow-inner-card: 
     inset -2px 2px 4px rgba(0, 0, 0, 0.06),
-    inset -1px 2px 4px rgba(0, 0, 0, 0.05);
-    /* inset -33px 33px 28px rgba(0, 0, 0, 0.05),
-    inset -59px 59px 33px rgba(0, 0, 0, 0.01),
-    inset -92px 92px 37px rgba(0, 0, 0, 0); */
+    inset -1px 2px 4px rgba(0, 0, 0, 0.05),
+    inset -11px 11px 9px rgba(0, 0, 0, 0.05),
+    inset -20px 20px 11px rgba(0, 0, 0, 0.01),
+    inset -30px 30px 12px rgba(0, 0, 0, 0);
   
   /* Card Effects */
   --shadow-card-inactive: 

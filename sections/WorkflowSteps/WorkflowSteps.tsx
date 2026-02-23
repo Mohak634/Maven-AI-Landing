@@ -4,6 +4,7 @@ import { useState } from 'react'
 import styles from './WorkflowSteps.module.css'
 import VideoFrame from '@/components/ui/VideoFrame'
 import CarouselDots from '@/components/ui/CarouselDots'
+import ScrollSection from '@/components/ScrollSection'
 
 type WorkflowStep = {
   stepNumber: number
@@ -40,6 +41,7 @@ export default function WorkflowSteps() {
   const [activeStep, setActiveStep] = useState(0)
 
   return (
+    <ScrollSection>
     <section id="workflow" className={styles.workflowSteps}>
       <div className={styles.container}>
         <div className={styles.header}>
@@ -89,5 +91,6 @@ export default function WorkflowSteps() {
         </div>
       </div>
     </section>
+    </ScrollSection>
   )
 }
