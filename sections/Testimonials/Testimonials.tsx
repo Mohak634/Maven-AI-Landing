@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ScrollSection from '@/components/ScrollSection'
 import styles from './Testimonials.module.css'
 import TestimonialCard from './TestimonialCard'
 
@@ -130,7 +131,7 @@ export default function Testimonials() {
   const normalizedActiveIndex = normalizeIndex(activeIndex)
 
   return (
-    <section id="testimonials" className={styles.testimonials}>
+    <ScrollSection id="testimonials" className={styles.testimonials}>
       <h2 className={styles.heading}>
         What <span className={styles.headingHighlight}>people</span> say about us.
       </h2>
@@ -163,6 +164,6 @@ export default function Testimonials() {
           })}
         </div>
       </div>
-    </section>
+    </ScrollSection>
   )
-  }
+}

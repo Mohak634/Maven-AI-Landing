@@ -8,6 +8,8 @@
   flex-direction: column;
   gap: 2.5rem;
   align-items: center;
+  justify-content: center;
+  min-height: 100%;
   position: relative;
 }
 

@@ -1,17 +1,14 @@
 import styles from './Hero.module.css'
 import Button from '@/components/ui/Button'
 import HeroMockup from '@/sections/HeroMockup/HeroMockup'
+import AnimatedGridBackground from '@/components/AnimatedGridBackground'
 
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       {/* Background Layer */}
       <div className={styles.backgroundLayer}>
-        <img
-          src="/Hero/bg.svg"
-          alt=""
-          className={styles.backgroundImage}
-        />
+        <AnimatedGridBackground direction="diagonal" />
       </div>
 
       {/* Foreground Layer */}

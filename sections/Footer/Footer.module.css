@@ -1,5 +1,5 @@
 .footer {
-  width: 100vw;
+  width: 100%;
   background-color: var(--surface-secondary);
   padding: var(--space-xxxxl) var(--space-xxxxl) var(--space-md);
   display: flex;

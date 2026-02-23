@@ -15,7 +15,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  pointer-events: none;
+  pointer-events: auto;
   overflow: visible;
   opacity: 0.5;
 }

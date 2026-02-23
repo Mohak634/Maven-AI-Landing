@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ScrollSection from '@/components/ScrollSection'
 import Toggle from '@/components/ui/Toggle'
 import PricingCard from './PricingCard'
 import styles from './Pricing.module.css'
@@ -52,7 +53,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="pricing" className={styles.pricing}>
+    <ScrollSection id="pricing" className={styles.pricing}>
       {/* Background Layer */}
       <div className={styles.backgroundLayer}>
         <img
@@ -87,6 +88,6 @@ export default function Pricing() {
           ))}
         </div>
       </div>
-    </section>
+    </ScrollSection>
   )
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ScrollSection from '@/components/ScrollSection'
 import styles from './Security.module.css'
 import Button from '@/components/ui/Button'
 
@@ -33,7 +34,7 @@ const securityFeatures: SecurityFeature[] = [
 
 export default function Security() {
   return (
-    <section id="security" className={styles.security}>
+    <ScrollSection id="security" className={styles.security}>
       <div className={styles.container}>
         <div className={styles.leftColumn}>
           <h2 className={styles.headline}>Built for Enterprise Security</h2>
@@ -69,6 +70,6 @@ export default function Security() {
           </div>
         </div>
       </div>
-    </section>
+    </ScrollSection>
   )
 }
