@@ -1,6 +1,6 @@
 .security {
   width: 100%;
-  background-color: var(--surface-accent);
+  background-color: var(--surface-secondary);
   padding: 7rem var(--layout-container-padding-x);
   display: flex;
   justify-content: center;
