@@ -16,10 +16,14 @@ export default function Footer() {
       <div className={styles.linksSection}>
         <div className={styles.companyInfo}>
           <p className={styles.companyName}>Maven AI</p>
-          <p className={styles.address}>
-            Address Line 1<br />
-            Address Line 2
-          </p>
+          <p>
+            For further information, please reach out to:</p>
+            <br />
+            <p className={styles.companyName}>Akshat Ajmera</p>
+            <p>Co-Founder, Maven</p>
+            <br></br>
+            <a href = "mailto:akshat@trymavenai.com" className ={styles.footerLink}><p>akshat@trymavenai.com</p></a>
+            <a href = "tel:+6587967803" className ={styles.footerLink}><p>+65 87967803</p></a>
         </div>
 
         <div className={styles.linkGroups}>

@@ -49,12 +49,17 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function Testimonials() {
-  // Start at the center-most card
-  const initialIndex = Math.floor(testimonials.length / 2)
-  const [activeIndex, setActiveIndex] = useState(initialIndex)
   const [isMobile, setIsMobile] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
   const [isTablet, setIsTablet] = useState(false)
+
+  // Infinite loop configuration: Duplicate the items 3 times for a buffer on each side
+  const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials]
+  // Start at the center copy to allow natural backwards/forwards scrolling
+  const initialIndex = testimonials.length + Math.floor(testimonials.length / 2)
+
+  const [activeIndex, setActiveIndex] = useState(initialIndex)
+  const [isTransitioning, setIsTransitioning] = useState(true)
 
   useEffect(() => {
     const checkViewport = () => {
@@ -72,6 +77,29 @@ export default function Testimonials() {
     return () => window.removeEventListener('resize', checkViewport)
   }, [])
 
+  // Auto-play effect
+  useEffect(() => {
+    if (isTablet) return // Disable auto-play on tablet horizontal scroll
+
+    const interval = setInterval(() => {
+      setIsTransitioning(true)
+      setActiveIndex((prev) => prev + 1)
+    }, 4000)
+
+    // Clear interval immediately on interaction or unmount
+    return () => clearInterval(interval)
+  }, [isTablet, activeIndex])
+
+  // Restore transition state instantly after an invisible snap boundary
+  useEffect(() => {
+    if (!isTransitioning) {
+      const timeout = setTimeout(() => {
+        setIsTransitioning(true)
+      }, 50)
+      return () => clearTimeout(timeout)
+    }
+  }, [isTransitioning])
+
   // Card dimensions and spacing (in rem, assuming 1rem = 10px)
   // Desktop dimensions (used at 769px and above, default styles) - increased by 10%
   const ACTIVE_CARD_WIDTH_DESKTOP = 84.48 // 76.8rem * 1.1 = 84.48rem
@@ -84,9 +112,6 @@ export default function Testimonials() {
   const CARD_GAP_MOBILE = 2.2 // 2rem * 1.1 = 2.2rem
 
   // Use responsive dimensions
-  // Mobile: <= 768px uses mobile dimensions
-  // Tablet/Desktop: > 768px uses desktop dimensions (default CSS styles)
-  // At 1230px+ explicitly uses desktop dimensions (CSS media query)
   const ACTIVE_CARD_WIDTH = isMobile ? ACTIVE_CARD_WIDTH_MOBILE : ACTIVE_CARD_WIDTH_DESKTOP
   const INACTIVE_CARD_WIDTH = isMobile ? INACTIVE_CARD_WIDTH_MOBILE : INACTIVE_CARD_WIDTH_DESKTOP
   const CARD_GAP = isMobile ? CARD_GAP_MOBILE : CARD_GAP_DESKTOP
@@ -94,41 +119,33 @@ export default function Testimonials() {
   // Spacing between card centers (using inactive width + gap for simpler calculation)
   const CARD_SPACING = INACTIVE_CARD_WIDTH + CARD_GAP
 
-  // Normalize index to always be within bounds (0 to testimonials.length - 1)
-  const normalizeIndex = (index: number): number => {
-    // Handle negative indices properly
-    if (index < 0) {
-      const mod = index % testimonials.length
-      return mod < 0 ? mod + testimonials.length : mod
-    }
-    // Handle indices >= length
-    if (index >= testimonials.length) {
-      return index % testimonials.length
-    }
-    return index
-  }
-
   const handleCardClick = (targetIndex: number) => {
-    // Normalize the target index to ensure it's within bounds
-    const normalizedIndex = normalizeIndex(targetIndex)
-    setActiveIndex(normalizedIndex)
+    if (targetIndex === activeIndex) return
+    setIsTransitioning(true)
+    setActiveIndex(targetIndex)
   }
 
-  // Calculate transform to center the active card
-  // We need to account for half the active card width plus spacing for previous cards
+  const handleTransitionEnd = () => {
+    // If scrolling horizontally into the first copy (left buffer)
+    if (activeIndex < testimonials.length) {
+      setIsTransitioning(false)
+      setActiveIndex(activeIndex + testimonials.length)
+    }
+    // If scrolling horizontally into the third copy (right buffer)
+    else if (activeIndex >= testimonials.length * 2) {
+      setIsTransitioning(false)
+      setActiveIndex(activeIndex - testimonials.length)
+    }
+  }
+
+  // Calculate transform to center the active card over continuous bounds
   const calculateTransform = () => {
     const halfActiveWidth = ACTIVE_CARD_WIDTH / 2
-    
-    // Normalize the active index to ensure it's within bounds
-    const normalizedIndex = normalizeIndex(activeIndex)
-    
-    // For each previous card, account for inactive width + gap
-    const previousCardsOffset = normalizedIndex * CARD_SPACING
+
+    // For each previous card, account for inactive width + gap, natively moving without modulo snap.
+    const previousCardsOffset = activeIndex * CARD_SPACING
     return `translateX(calc(50% - ${halfActiveWidth + previousCardsOffset}rem))`
   }
-
-  // Get normalized active index for rendering
-  const normalizedActiveIndex = normalizeIndex(activeIndex)
 
   return (
     <ScrollSection id="testimonials" className={styles.testimonials}>
@@ -142,13 +159,17 @@ export default function Testimonials() {
           style={
             isTablet
               ? undefined
-              : { transform: calculateTransform() }
+              : {
+                transform: calculateTransform(),
+                transition: isTransitioning ? 'transform 0.5s ease' : 'none'
+              }
           }
+          onTransitionEnd={handleTransitionEnd}
         >
-          {testimonials.map((testimonial, index) => {
+          {extendedTestimonials.map((testimonial, index) => {
             // On tablet, all cards are active (horizontal scroll)
             // On mobile and desktop, use carousel logic
-            const isActive = isTablet ? true : index === normalizedActiveIndex
+            const isActive = isTablet ? true : index === activeIndex
 
             return (
               <TestimonialCard

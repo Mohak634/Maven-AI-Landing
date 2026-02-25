@@ -25,13 +25,23 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.ctaContainer}>
+          
           <a 
             href="https://demo.mavenai.finance" 
             target="_blank" 
             rel="noopener noreferrer"
             className={styles.ctaLink}>
-            <Button variant="primary" showTrailingIcon>
-              Try for Free
+            <Button variant="secondary" showTrailingIcon>
+              Try Now
+            </Button>
+          </a>
+          <a 
+            href="https://demo.mavenai.finance" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.ctaLink}>
+            <Button variant="primary">
+              Book Demo
             </Button>
           </a>
         </div>

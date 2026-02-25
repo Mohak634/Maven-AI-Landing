@@ -14,10 +14,10 @@ export interface AnimatedGridBackgroundProps {
 }
 
 const DEFAULT_DIRECTION: Direction = "right";
-const DEFAULT_SPEED = 0.15;
-const DEFAULT_SQUARE_SIZE = 28;
-const DEFAULT_BORDER_COLOR = "rgba(0,0,0,0.05)";
-const DEFAULT_HOVER_FILL_COLOR = "rgba(0,0,0,0.06)";
+const DEFAULT_SPEED = 0.5;
+const DEFAULT_SQUARE_SIZE = 30;
+const DEFAULT_BORDER_COLOR = "rgba(0,0,0,0.1)";
+const DEFAULT_HOVER_FILL_COLOR = "rgba(0,0,0,0.1)";
 
 export const AnimatedGridBackground: React.FC<AnimatedGridBackgroundProps> = ({
   direction = DEFAULT_DIRECTION,

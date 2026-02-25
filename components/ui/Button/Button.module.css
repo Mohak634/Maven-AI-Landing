@@ -23,35 +23,43 @@
 }
 
 .button.primary {
-  background-color: var(--button-primary-background);
-  color: var(--button-primary-text);
-  border-radius: var(--button-primary-border-radius);
-  box-shadow: var(--shadow-drop-small);
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary:hover:not(:disabled) {
-  box-shadow: var(--shadow-drop-small);
-  transform: translateY(-0.1rem);
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
+
+/* Active → slight press */
 .button.primary:active:not(:disabled) {
-  box-shadow: none;
-  transform: translateY(0.1rem);
+  transform: translate(4px, 4px);
 }
 
 .button.secondary {
-  background-color: var(--button-secondary-background);
-  color: var(--button-secondary-text);
-  border: var(--button-secondary-border);
-  border-radius: var(--button-secondary-border-radius);
+  background-color: var(--surface-primary);
+  color: var(--text-primary);
+  border-radius: 0;
+  border: 1px solid var(--text-primary);
+  box-shadow: 4px 4px 0px 0px var(--text-primary);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary:hover:not(:disabled) {
-  opacity: var(--hover-opacity);
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
 .button.secondary:active:not(:disabled) {
-  transform: translateY(0.1rem);
+  transform: translate(4px, 4px);
 }
 
 .button.disabled {

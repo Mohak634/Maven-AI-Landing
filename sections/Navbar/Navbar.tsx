@@ -59,12 +59,14 @@ export default function Navbar() {
     <>
       <header className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
         <div className={styles.container}>
+          <a href="#hero" className={styles.logoLink}>
           <div className={styles.logoSection}>
             <div className={styles.logoImage}>
               <Logo variant="transparent" />
             </div>
             <div className={styles.logoText}>Maven</div>
           </div>
+          </a>
 
           <nav className={styles.nav}>
             <NavLink href="#features">Solutions</NavLink>

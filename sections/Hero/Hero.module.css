@@ -74,10 +74,11 @@
 }
 
 .ctaContainer {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
   width: 100%;
 }
 

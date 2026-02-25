@@ -38,6 +38,12 @@
   flex-shrink: 0;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
 .logoImage {
   width: var(--navbar-logo-size);
   height: var(--navbar-logo-size);

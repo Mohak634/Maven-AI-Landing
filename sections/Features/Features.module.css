@@ -1,3 +1,33 @@
+.featuresOuter {
+  position: relative;
+  width: 100%;
+  background-color: var(--surface-secondary);
+}
+
+/* Desktop-only sticky scrolling */
+@media (min-width: 1024px) {
+  .featuresOuter {
+    height: 400vh;
+  }
+}
+
+.featuresStickyWrapper {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .featuresStickyWrapper {
+    position: sticky;
+    top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
+  }
+}
+
 .features {
   position: relative;
   width: 100%;
@@ -9,17 +39,6 @@
   justify-content: center;
   align-items: flex-start;
   overflow-x: clip;
-}
-
-/* Desktop-only sticky scrolling */
-@media (min-width: 1024px) {
-  .featuresSticky {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    /* Lock height during sticky phase to prevent layout shift */
-    will-change: transform;
-  }
 }
 
 .container {
@@ -110,13 +129,11 @@
 .bgGradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse 64.316% 36.261% at 50% 50%,
-    rgba(238, 238, 238, 1) 0%,
-    rgba(203, 203, 203, 1) 70.676%,
-    rgba(163, 163, 163, 1) 83.417%,
-    rgba(124, 124, 124, 1) 96.158%
-  );
+  background: radial-gradient(ellipse 64.316% 36.261% at 50% 50%,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(203, 203, 203, 1) 70.676%,
+      rgba(163, 163, 163, 1) 83.417%,
+      rgba(124, 124, 124, 1) 96.158%);
   opacity: 1;
 }
 
@@ -162,19 +179,18 @@
 }
 
 .contentFrameAnimating {
-  animation: scrollUp 0.6s ease-in-out;
+  animation: scrollUp 0.5s ease-in-out;
 }
 
 @keyframes scrollUp {
   0% {
-    transform: translateY(8rem);
+    transform: translateX(20rem);
     opacity: 0;
   }
-  50% {
-    opacity: 0.3;
-  }
+
+
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -273,9 +289,11 @@
   0% {
     opacity: 0.;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
@@ -334,13 +352,11 @@
 .mobileFeatureBgGradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse 64.316% 36.261% at 50% 50%,
-    rgba(238, 238, 238, 1) 0%,
-    rgba(203, 203, 203, 1) 70.676%,
-    rgba(163, 163, 163, 1) 83.417%,
-    rgba(124, 124, 124, 1) 96.158%
-  );
+  background: radial-gradient(ellipse 64.316% 36.261% at 50% 50%,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(203, 203, 203, 1) 70.676%,
+      rgba(163, 163, 163, 1) 83.417%,
+      rgba(124, 124, 124, 1) 96.158%);
   opacity: 1;
 }
 
@@ -428,10 +444,12 @@
   .features {
     padding: 7rem 3rem;
   }
+
   .contentFrame {
-    
+
     padding: 4rem;
   }
+
   .scrollerContent {
     max-width: 100%;
     flex-shrink: 1;
@@ -442,11 +460,13 @@
   .features {
     padding: 7rem 2rem;
   }
+
   .contentFrame {
     padding: 4rem;
     /* aspect-ratio: 16/9;
     min-height: auto; */
   }
+
   .scrollerContent {
     max-width: 100%;
     flex-shrink: 1;
