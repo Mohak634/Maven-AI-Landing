@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
         <div className={styles.mockupContainer}>
           <HeroMockup
-            videoSrc="/videos/hero-demo.mp4"
+            videoSrc="/videos/useCases/Research.mp4"
             aspectRatio="16/9"
           />
         </div>

@@ -14,7 +14,7 @@ const useCases: UseCase[] = [
     label: 'Research',
     description:
       'Maven remembers your workstreams, files, and decisions, so every step builds on the last.',
-    videoSrc: 'videos/hero-demo.mp4',
+    videoSrc: 'videos/useCases/Research.mp4',
   },  
   {
     label: 'Citations',

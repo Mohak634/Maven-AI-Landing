@@ -26,14 +26,14 @@ const workflowSteps: WorkflowStep[] = [
     title: 'Maven does the heavy lifting',
     description:
       'Maven analyzes your requirements and generates production-ready code, documentation, and test cases automatically.',
-    mockupSrc: '/workflow/step2-mockup.png',
+    mockupSrc: '/workflow/step1-mockup.png',
   },
   {
     stepNumber: 3,
     title: 'Review and deploy',
     description:
       'Review the generated output, make any necessary adjustments, and deploy with confidence. Full audit trail included.',
-    mockupSrc: '/workflow/step3-mockup.png',
+    mockupSrc: '/workflow/step1-mockup.png',
   },
 ]
 
