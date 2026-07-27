@@ -10,8 +10,8 @@ export default function About() {
         
         <div className={styles.teamGrid}>
           <TeamCard
-            imagePath="/Team/akshat.jpg"
-            name="Akshat Ajmera"
+            imagePath="/Team/placeholder.svg"
+            name="Lorem Ipsum"
             role="Finance Lead"
             keyPoint1="• Lorem ipsum dolor sit amet."
             keyPoint2="• Lorem ipsum dolor sit amet."
@@ -19,8 +19,8 @@ export default function About() {
             keyPoint4="• Lorem ipsum dolor sit amet."
           />
           <TeamCard
-            imagePath="/Team/akshat.jpg"
-            name="Yuv Bindal"
+            imagePath="/Team/placeholder.svg"
+            name="Dolor Amet"
             role="Tech Lead"
             keyPoint1="• Lorem ipsum dolor sit amet."
             keyPoint2="• Lorem ipsum dolor sit amet."
@@ -28,8 +28,8 @@ export default function About() {
             keyPoint4="• Lorem ipsum dolor sit amet."
           />
           <TeamCard
-            imagePath="/Team/akshat.jpg"
-            name="Shayaan"
+            imagePath="/Team/placeholder.svg"
+            name="Sit Consectetur"
             role="Tech Lead"
             keyPoint1="• Lorem ipsum dolor sit amet."
             keyPoint2="• Lorem ipsum dolor sit amet"

@@ -19,11 +19,11 @@ export default function Footer() {
           <p>
             For further information, please reach out to:</p>
             <br />
-            <p className={styles.companyName}>Akshat Ajmera</p>
+            <p className={styles.companyName}>Lorem Ipsum</p>
             <p>Co-Founder, Maven</p>
             <br></br>
-            <a href = "mailto:akshat@trymavenai.com" className ={styles.footerLink}><p>akshat@trymavenai.com</p></a>
-            <a href = "tel:+6587967803" className ={styles.footerLink}><p>+65 87967803</p></a>
+            <a href = "mailto:lorem@ipsum.com" className ={styles.footerLink}><p>lorem@ipsum.com</p></a>
+            <a href = "tel:+000000000" className ={styles.footerLink}><p>+00 00000000</p></a>
         </div>
 
         <div className={styles.linkGroups}>

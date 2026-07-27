@@ -75,10 +75,8 @@ export default function Navbar() {
           </nav>
 
           <div className={styles.cta}>
-            <a 
-              href="https://calendar.app.google/gPg34HLf928hQaeR8" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <a
+              href="#footer"
               style={{ textDecoration: 'none' }}
             >
               <Button variant="primary">Request Demo</Button>
@@ -137,10 +135,8 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className={styles.mobileMenuCta}>
-            <a 
-              href="https://calendar.app.google/gPg34HLf928hQaeR8" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <a
+              href="#footer"
               onClick={closeMobileMenu}
               style={{ textDecoration: 'none', width: '100%', display: 'block' }}
             >
